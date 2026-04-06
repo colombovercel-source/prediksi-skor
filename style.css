@@ -24,6 +24,8 @@ body::before {
   background:rgba(0,0,0,0.7);
   z-index:-1;
 }
+
+/* MENU & BURGER */
 .menu-container {
   position: absolute;
   top: 20px;
