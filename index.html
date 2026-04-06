@@ -3,24 +3,389 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RINJANI4D</title>
+  <meta name="description" content="Prediksi skor pertandingan sepak bola hari ini — akurat dan terpercaya.">
+  <title>PrediksiGol — Prediksi Skor Bola Hari Ini</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="overlay">
-    <div class="content">
-      <h1>RINJANI4D</h1>
-      <p class="tagline">Platform terpercaya dengan kemenangan nyata setiap hari</p>
+  <!-- ══════════════════════════════
+       BACKGROUND OVERLAY
+  ══════════════════════════════ -->
+  <div class="bg-overlay"></div>
 
-      <div class="cta">
-        <a href="https://rinjaniman.com" class="btn primary">DAFTAR SEKARANG</a>
-        <a href="https://rinjaniman.com" class="btn secondary">LOGIN</a>
-      </div>
-
-      <p class="info">Minimal depo 10K • WD cepat • Support 24 jam</p>
+  <!-- ══════════════════════════════
+       HEADER
+  ══════════════════════════════ -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">⚽</div>
+      Prediksi<span>Gol</span>
     </div>
+    <div class="header-right">
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        Live
+      </div>
+      <div class="update-time" id="update-time">—</div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-date" id="hero-date">Memuat tanggal...</div>
+      <h1>Prediksi Skor <em>Hari Ini</em></h1>
+      <p class="hero-sub">Analisis pertandingan sepak bola pilihan. Bukan jaminan, tapi acuan terbaik kami.</p>
+      <div class="stats-strip">
+        <div class="stat-item">
+          <strong id="total-matches">0</strong>
+          <span>Pertandingan</span>
+        </div>
+        <div class="stat-item">
+          <strong id="total-leagues">0</strong>
+          <span>Liga</span>
+        </div>
+        <div class="stat-item">
+          <strong id="done-count">0</strong>
+          <span>Selesai</span>
+        </div>
+        <div class="stat-item">
+          <strong id="live-count">0</strong>
+          <span>Live</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FILTER TABS
+  ══════════════════════════════ -->
+  <div class="filter-wrap" id="filter-tabs">
+    <button class="filter-tab active" data-filter="all">Semua</button>
+    <button class="filter-tab" data-filter="upcoming">Belum Main</button>
+    <button class="filter-tab" data-filter="live">Live</button>
+    <button class="filter-tab" data-filter="done">Selesai</button>
   </div>
+
+  <!-- ══════════════════════════════
+       MATCH CARDS — dirender JS
+  ══════════════════════════════ -->
+  <main id="matches-container"></main>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer>
+    <strong>PrediksiGol</strong> — Prediksi skor bola hari ini<br>
+    Prediksi bersifat analitis, bukan jaminan hasil pertandingan.<br>
+    Update: <span id="footer-update">—</span>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+    ╔════════════════════════════════════════════════════════╗
+    ║   EDIT DATA PERTANDINGAN DI SINI                       ║
+    ║                                                        ║
+    ║   STATUS:                                              ║
+    ║   "upcoming" = belum main                              ║
+    ║   "live"     = sedang berlangsung                      ║
+    ║   "done"     = sudah selesai                           ║
+    ║                                                        ║
+    ║   Isi "result" setelah pertandingan selesai            ║
+    ║   Contoh: result: "2-1"                                ║
+    ╚════════════════════════════════════════════════════════╝
+  ══════════════════════════════════════════════════════════ -->
+  <script>
+  const matchData = [
+
+    /* ─── PREMIER LEAGUE ─── */
+    {
+      league:     "Premier League",
+      leagueFlag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      matches: [
+        {
+          time:      "21:00",
+          status:    "done",          /* upcoming | live | done */
+          home:      "Manchester City",
+          homeEmoji: "🔵",
+          away:      "Arsenal",
+          awayEmoji: "🔴",
+          predict:   "1-1",
+          result:    "2-0",           /* ← isi setelah selesai */
+          homeWin:   48,
+          draw:      26,
+          awayWin:   26,
+          tip:       "BTTS",
+          note:      "Laga panas, kedua tim sama kuat"
+        },
+        {
+          time:      "23:30",
+          status:    "upcoming",
+          home:      "Liverpool",
+          homeEmoji: "🔴",
+          away:      "Chelsea",
+          awayEmoji: "🔵",
+          predict:   "2-1",
+          result:    "",
+          homeWin:   55,
+          draw:      22,
+          awayWin:   23,
+          tip:       "Over 2.5",
+          note:      "Liverpool unggul head-to-head musim ini"
+        }
+      ]
+    },
+
+    /* ─── LA LIGA ─── */
+    {
+      league:     "La Liga",
+      leagueFlag: "🇪🇸",
+      matches: [
+        {
+          time:      "22:00",
+          status:    "upcoming",
+          home:      "Real Madrid",
+          homeEmoji: "⚪",
+          away:      "Barcelona",
+          awayEmoji: "🔵",
+          predict:   "2-1",
+          result:    "",
+          homeWin:   44,
+          draw:      24,
+          awayWin:   32,
+          tip:       "Home Win",
+          note:      "El Clasico — Madrid dalam performa terbaik"
+        }
+      ]
+    },
+
+    /* ─── SERIE A ─── */
+    {
+      league:     "Serie A",
+      leagueFlag: "🇮🇹",
+      matches: [
+        {
+          time:      "20:45",
+          status:    "live",
+          home:      "Inter Milan",
+          homeEmoji: "🖤",
+          away:      "AC Milan",
+          awayEmoji: "⚫",
+          predict:   "2-0",
+          result:    "1-0",           /* skor sementara */
+          homeWin:   52,
+          draw:      23,
+          awayWin:   25,
+          tip:       "Home Win",
+          note:      "Derby della Madonnina — Inter favorit"
+        }
+      ]
+    },
+
+    /* ─── BUNDESLIGA ─── */
+    {
+      league:     "Bundesliga",
+      leagueFlag: "🇩🇪",
+      matches: [
+        {
+          time:      "21:30",
+          status:    "upcoming",
+          home:      "Bayern Munich",
+          homeEmoji: "🔴",
+          away:      "Borussia Dortmund",
+          awayEmoji: "🟡",
+          predict:   "3-1",
+          result:    "",
+          homeWin:   62,
+          draw:      18,
+          awayWin:   20,
+          tip:       "Over 2.5",
+          note:      "Der Klassiker — Bayern dominan di kandang"
+        }
+      ]
+    },
+
+    /* ─── CHAMPIONS LEAGUE ─── */
+    {
+      league:     "UEFA Champions League",
+      leagueFlag: "🌟",
+      matches: [
+        {
+          time:      "03:00",
+          status:    "upcoming",
+          home:      "PSG",
+          homeEmoji: "🔵",
+          away:      "Juventus",
+          awayEmoji: "⬛",
+          predict:   "2-1",
+          result:    "",
+          homeWin:   50,
+          draw:      25,
+          awayWin:   25,
+          tip:       "1X",
+          note:      "PSG unggul di kandang musim ini"
+        },
+        {
+          time:      "03:00",
+          status:    "upcoming",
+          home:      "Dortmund",
+          homeEmoji: "🟡",
+          away:      "Atletico",
+          awayEmoji: "🔴",
+          predict:   "1-1",
+          result:    "",
+          homeWin:   40,
+          draw:      30,
+          awayWin:   30,
+          tip:       "X2",
+          note:      "Atletico bertahan kuat di Eropa"
+        }
+      ]
+    }
+
+  ];
+  /* ══════════════════════════════════════════════════════════
+     JANGAN EDIT DI BAWAH INI
+  ══════════════════════════════════════════════════════════ */
+
+  function getStatusBadge(status) {
+    if (status === 'live') return '<span class="badge badge-live">● LIVE</span>';
+    if (status === 'done') return '<span class="badge badge-done">SELESAI</span>';
+    return '<span class="badge badge-upcoming">SEGERA</span>';
+  }
+
+  function renderScoreArea(match) {
+    const p = match.predict.split('-');
+    if (match.status === 'done' || match.status === 'live') {
+      const isLive = match.status === 'live';
+      const lbl = isLive ? 'Skor Live' : 'Skor Akhir';
+      const cls = isLive ? 'score-final-live' : 'score-final-done';
+      return `
+        <div class="score-area">
+          <div class="score-predict faded">
+            <div class="score-box small">${p[0]}</div>
+            <div class="score-sep">-</div>
+            <div class="score-box small">${p[1]}</div>
+          </div>
+          <div class="score-label">prediksi</div>
+          <div class="score-result ${cls}">${match.result || '- -'}</div>
+          <div class="score-result-label ${cls}">${lbl}</div>
+        </div>`;
+    }
+    return `
+      <div class="score-area">
+        <div class="score-predict">
+          <div class="score-box">${p[0]}</div>
+          <div class="score-sep">-</div>
+          <div class="score-box">${p[1]}</div>
+        </div>
+        <div class="score-label">prediksi</div>
+      </div>`;
+  }
+
+  function renderMatch(match) {
+    const total = match.homeWin + match.draw + match.awayWin;
+    const hw = ((match.homeWin / total) * 100).toFixed(0);
+    const dr = ((match.draw    / total) * 100).toFixed(0);
+    const aw = ((match.awayWin / total) * 100).toFixed(0);
+    return `
+      <div class="match-card status-${match.status}" data-status="${match.status}">
+        <div class="match-meta">
+          <span class="match-time">⏱ ${match.time} WIB</span>
+          ${getStatusBadge(match.status)}
+        </div>
+        <div class="teams-row">
+          <div class="team home">
+            <div class="team-logo">${match.homeEmoji}</div>
+            <div class="team-name">${match.home}</div>
+          </div>
+          ${renderScoreArea(match)}
+          <div class="team away">
+            <div class="team-name">${match.away}</div>
+            <div class="team-logo">${match.awayEmoji}</div>
+          </div>
+        </div>
+        <div class="analysis-row">
+          <span class="bar-pct bar-pct-home">${hw}%</span>
+          <div class="bar-track">
+            <div class="bar-segment bar-home" style="width:${hw}%"></div>
+            <div class="bar-segment bar-draw" style="width:${dr}%"></div>
+            <div class="bar-segment bar-away" style="width:${aw}%"></div>
+          </div>
+          <span class="bar-pct bar-pct-away">${aw}%</span>
+          <span class="tip-badge">${match.tip}</span>
+        </div>
+        ${match.note ? `<div class="match-note">💬 ${match.note}</div>` : ''}
+      </div>`;
+  }
+
+  function renderAll(filter = 'all') {
+    const container = document.getElementById('matches-container');
+    let html = '';
+    let totalMatches = 0, doneCount = 0, liveCount = 0, leagueCount = 0;
+
+    matchData.forEach(league => {
+      const filtered = filter === 'all'
+        ? league.matches
+        : league.matches.filter(m => m.status === filter);
+      if (!filtered.length) return;
+      leagueCount++;
+      totalMatches += filtered.length;
+      filtered.forEach(m => {
+        if (m.status === 'done') doneCount++;
+        if (m.status === 'live') liveCount++;
+      });
+      html += `
+        <div class="league-group">
+          <div class="league-header">
+            <span class="league-flag">${league.leagueFlag}</span>
+            <span class="league-name">${league.league}</span>
+            <span class="league-count">${filtered.length} match</span>
+          </div>
+          ${filtered.map(m => renderMatch(m)).join('')}
+        </div>`;
+    });
+
+    container.innerHTML = html ||
+      '<div class="empty-state">Tidak ada pertandingan di kategori ini.</div>';
+
+    document.getElementById('total-matches').textContent = totalMatches;
+    document.getElementById('total-leagues').textContent = leagueCount;
+    document.getElementById('done-count').textContent    = doneCount;
+    document.getElementById('live-count').textContent    = liveCount;
+  }
+
+  /* filter tabs */
+  document.querySelectorAll('.filter-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderAll(btn.dataset.filter);
+    });
+  });
+
+  /* date & time */
+  function updateDateTime() {
+    const now    = new Date();
+    const days   = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+    const months = ['Januari','Februari','Maret','April','Mei','Juni',
+                    'Juli','Agustus','September','Oktober','November','Desember'];
+    const dateStr = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+    const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('hero-date').textContent    = dateStr;
+    document.getElementById('update-time').textContent  = 'Update ' + timeStr;
+    document.getElementById('footer-update').textContent = dateStr + ', ' + timeStr + ' WIB';
+  }
+
+  updateDateTime();
+  setInterval(updateDateTime, 30000);
+  renderAll();
+  </script>
 
 </body>
 </html>
