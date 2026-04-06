@@ -1,84 +1,180 @@
-/* ... Kode sebelumnya tetap sama ... */
+/* --- RESET & DASAR --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Barlow', sans-serif; color: white; background: #000; overflow-x: hidden; }
+body { 
+    font-family: 'Barlow', sans-serif; 
+    color: white; 
+    overflow-x: hidden; 
+    min-height: 100vh;
+    /* Pastikan tidak ada warna solid di body */
+    background: none; 
+}
 
-/* HEADER & MENU */
+/* --- FIX BACKGROUND UTAMA --- */
+body::before {
+    content: ""; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    /* Link gambar background Anda */
+    background: url('https://i.imgur.com/zGbaikU.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: -2; 
+    filter: brightness(0.6); /* Mengatur kegelapan agar teks emas/putih menyala */
+}
+
+/* Overlay Hitam Halus agar background tidak terlalu ramai */
+.bg-overlay { 
+    position: fixed; 
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+
+/* --- HEADER --- */
 header { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 10px 20px; 
-    background: rgba(0,0,0,0.9); 
-    border-bottom: 1px solid #ffd700; 
-    position: relative;
+    background: rgba(0, 0, 0, 0.85); /* Semi transparan */
+    border-bottom: 2px solid #ffd700; 
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 .logo img { height: 45px; width: auto; object-fit: contain; }
 
-/* BURGER ICON */
+/* --- BURGER & DROPDOWN --- */
 .menu-container { position: relative; }
-.burger { cursor: pointer; display: block; }
+.burger { cursor: pointer; padding: 5px; }
 .burger span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    margin: 5px 0;
-    background: #ffd700;
-    transition: 0.3s;
-    border-radius: 2px;
+    display: block; width: 25px; height: 3px; margin: 5px 0;
+    background: #ffd700; border-radius: 2px;
 }
-
-/* DROPDOWN MENU */
 .dropdown-card {
-    display: none; /* Sembunyi secara default */
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background: #111;
-    border: 1px solid #ffd700;
-    border-radius: 8px;
-    width: 150px;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    display: none; position: absolute; top: 50px; right: 0;
+    background: rgba(17, 17, 17, 0.95); border: 1px solid #ffd700;
+    border-radius: 8px; width: 160px; flex-direction: column; 
+    backdrop-filter: blur(10px);
 }
-.dropdown-card.active { display: flex; } /* Muncul saat ada class 'active' */
+.dropdown-card.active { display: flex; }
 .dropdown-card a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 15px;
-    font-size: 14px;
-    border-bottom: 1px solid #222;
-    transition: 0.3s;
+    color: white; text-decoration: none; padding: 12px 15px;
+    font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .dropdown-card a:hover { background: #ffd700; color: #000; }
 
-/* BANNER ANTI-GEPENG */
+/* --- RUNNING TEXT --- */
+.marquee-container { 
+    background: #b32e2e; 
+    height: 35px; 
+    display: flex; 
+    align-items: center; 
+    border-bottom: 2px solid #ffd700; 
+}
+.marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; width: 100%; }
+
+/* --- BANNER SLIDER (ANTI-GEPENG) --- */
 .banner-slider { 
     width: 100%; 
     position: relative; 
     overflow: hidden; 
-    background: #000;
-    aspect-ratio: 21 / 9; 
+    aspect-ratio: 21 / 9; /* Rasio terkunci */
     border-bottom: 2px solid #ffd700;
 }
 .slider-wrapper { display: flex; transition: transform 0.6s ease-in-out; height: 100%; }
 .slide { min-width: 100%; height: 100%; position: relative; }
-.slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.slide img { 
+    width: 100%; height: 100%; 
+    object-fit: cover; /* Tidak akan penyok */
+    object-position: center; 
+}
 
-/* ... (Sisanya: Marquee, Table, Card, Floating sama dengan versi sebelumnya) ... */
-.marquee-container { background: #b32e2e; height: 35px; display: flex; align-items: center; border-bottom: 2px solid #ffd700; }
-.marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; width: 100%; }
+.prev-btn, .next-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); color: #ffd700; border: none;
+    font-size: 24px; padding: 10px; cursor: pointer; z-index: 5;
+}
+.next-btn { right: 0; }
+.prev-btn { left: 0; }
+
+/* --- TABEL JADWAL (TRANSPARAN) --- */
 .schedule-section { padding: 30px 20px; max-width: 1100px; margin: auto; }
-.table-container { background: rgba(0,0,0,0.85); border-radius: 12px; overflow-x: auto; border: 1px solid rgba(255,215,0,0.2); }
+.section-title { font-weight: 800; color: #ffd700; margin-bottom: 15px; border-left: 4px solid #ffd700; padding-left: 15px; }
+.table-container { 
+    background: rgba(0, 0, 0, 0.7); /* Transparan agar BG terlihat */
+    backdrop-filter: blur(5px); 
+    border-radius: 12px; 
+    overflow-x: auto; 
+    border: 1px solid rgba(255, 215, 0, 0.3); 
+}
 table { width: 100%; border-collapse: collapse; min-width: 600px; }
-th { background: rgba(255,215,0,0.1); color: #ffd700; padding: 15px; text-align: left; }
-td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1100px; margin: auto; }
-.card { background: rgba(0,0,0,0.75); padding: 25px; border-radius: 15px; text-align: center; border: 1px solid rgba(255,215,0,0.1); }
-.teams { display: flex; justify-content: space-between; align-items: center; }
-.team img { width: 60px; height: 60px; object-fit: contain; border: 2px solid #ffd700; border-radius: 50%; background: #111; padding: 5px; }
-.score { font-size: 35px; font-weight: 700; margin: 10px 0; }
-.card-btn { display: inline-block; margin-top: 15px; color: #000; background: #ffd700; text-decoration: none; padding: 10px 25px; border-radius: 8px; font-weight: bold; }
-.floating { position: fixed; bottom: 20px; right: 20px; background: #ffd700; color: #000; padding: 14px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 100; }
+th { background: rgba(255, 215, 0, 0.2); color: #ffd700; padding: 15px; text-align: left; font-size: 13px; }
+td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; }
+
+/* --- KARTU SKOR (GLASS EFFECT) --- */
+.match-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+    max-width: 1100px; 
+    margin: auto; 
+}
+.card { 
+    background: rgba(0, 0, 0, 0.65); /* Transparan */
+    backdrop-filter: blur(8px); /* Efek kaca */
+    padding: 25px; 
+    border-radius: 15px; 
+    text-align: center; 
+    border: 1px solid rgba(255, 215, 0, 0.2); 
+}
+.teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.team img { 
+    width: 60px; height: 60px; 
+    object-fit: contain; 
+    border: 2px solid #ffd700; 
+    border-radius: 50%; 
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 5px; 
+}
+.vs { font-size: 22px; font-weight: 800; color: #ffd700; }
+.score { font-size: 35px; font-weight: 700; margin: 10px 0; color: #ffd700; }
+
+.card-btn { 
+    display: inline-block; 
+    margin-top: 15px; 
+    color: #000; 
+    background: #ffd700; 
+    text-decoration: none; 
+    padding: 10px 25px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+}
+
+/* --- FLOATING BUTTON --- */
+.floating { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background: #ffd700; 
+    color: #000; 
+    padding: 15px 25px; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: 800; 
+    z-index: 100; 
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); 
+}
+
+/* DOTS SLIDER */
+.dots-container { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
+.dot { width: 10px; height: 10px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; }
+.dot.active { background: #ffd700; width: 25px; border-radius: 10px; transition: 0.3s; }
