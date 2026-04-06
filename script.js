@@ -21,8 +21,8 @@ const schedules = [
 ];
 
 const matchResults = [
-    { home: "Arsenal", homeLogo: "https://i.imgur.com/e4HFaAA.png", away: "Chelsea", awayLogo: "https://i.imgur.com/rRKLxQd.png", score: "2-1", status: "Full Time" },
-    { home: "Liverpool", homeLogo: "https://i.imgur.com/kufe8Br.png", away: "Man City", awayLogo: "https://i.imgur.com/X7oPQOJ.png", score: "1-1", status: "Full Time" }
+    { home: "Arsenal", homeLogo: "https://i.imgur.com/e4HFaAA.png", away: "Chelsea", awayLogo: "https://i.imgur.com/rRKLxQd.png", score: "1-3", status: "Full Time" },
+    { home: "Liverpool", homeLogo: "https://i.imgur.com/kufe8Br.png", away: "Man City", awayLogo: "https://i.imgur.com/X7oPQOJ.png", score: "2-4", status: "Full Time" }
 ];
 
 function renderPage() {
