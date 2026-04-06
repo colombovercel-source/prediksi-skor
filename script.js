@@ -1,51 +1,37 @@
-// DATA TRANSAKSI
-const transactions = [
-    { user: "Wawa***", type: "WITHDRAW", amount: "2.100.000", time: "Baru saja" },
-    { user: "Boby***", type: "DEPOSIT", amount: "50.000", time: "1 mnt lalu" },
-    { user: "Sury***", type: "WITHDRAW", amount: "800.000", time: "4 mnt lalu" },
-    { user: "Anan***", type: "DEPOSIT", amount: "200.000", time: "7 mnt lalu" }
-];
-
-// DATA JADWAL DENGAN WIN PROBABILITY (H|D|A)
+// DATA JADWAL PROBABILITAS (Format: Home | Draw | Away)
 const schedules = [
-    { time: "21:00", league: "Premier League", match: "Arsenal vs Liverpool", winProb: "home 45 | draw 15 | away 40", hot: true },
-    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", winProb: "home 60 | draw 25 | away 15", hot: false },
-    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", winProb: "home 35 | draw 30 | away 35", hot: true },
-    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", winProb: "home 50 | draw 20 | away 30", hot: true },
-    { time: "19:30", league: "Bundesliga", match: "Bayern vs Dortmund", winProb: "home 55 | draw 15 | away 30", hot: false },
-    { time: "15:30", league: "BRI Liga 1", match: "Persib vs Persija", winProb: "home 42 |draw 20 | away 38", hot: true }
+    { time: "21:00", league: "Premier League", match: "Arsenal vs Liverpool", winProb: "Home 45% | Draw 15% | Away 40%" },
+    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", winProb: "Home 60% | Draw 25% | Away 15%" },
+    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", winProb: "Home 35% | Draw 30% | Away 35%" },
+    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", winProb: "Home 50% | Draw 20% | Away 30%" },
+    { time: "19:30", league: "Bundesliga", match: "Bayern vs Dortmund", winProb: "Home 55% | Draw 15% | Away 30%" },
+    { time: "15:30", league: "BRI Liga 1", match: "Persib vs Persija", winProb: "Home 42% | Draw 20% | Away 38%" }
 ];
 
-// PREDIKSI MATCHES
+// PREDIKSI MATCHES (2 KARTU)
 const matchData = [
-  { league: "Premier League", matches: [
-      { home:"Arsenal", homeLogo:"https://i.imgur.com/e4HFaAA.png", away:"Chelsea", awayLogo:"https://i.imgur.com/rRKLxQd.png", score:"2-1", time:"20:00" }
-  ]}
+  { 
+    league: "Premier League", 
+    matches: [
+      { home:"Arsenal", homeLogo:"https://i.imgur.com/e4HFaAA.png", away:"Chelsea", awayLogo:"https://i.imgur.com/rRKLxQd.png", score:"2-1", time:"20:00" },
+      { home:"Liverpool", homeLogo:"https://i.imgur.com/kufe8Br.png", away:"Man City", awayLogo:"https://i.imgur.com/X7oPQOJ.png", score:"1-1", time:"22:00" }
+    ]
+  }
 ];
 
 function renderAll() {
-    // Transaksi
-    const track = document.getElementById('transTrack');
-    track.innerHTML = [...transactions, ...transactions].map(t => `
-        <div class="trans-item">
-            <span>[${t.time}]</span> <b>${t.user}</b> 
-            <span class="${t.type === 'DEPOSIT' ? 'status-depo' : 'status-wd'}">${t.type}</span> 
-            <b>IDR ${t.amount}</b>
-        </div>
-    `).join('');
-
-    // Jadwal Probabilitas
+    // Render Jadwal
     const schedBody = document.getElementById('scheduleBody');
     schedBody.innerHTML = schedules.map(s => `
         <tr>
             <td>${s.time} WIB</td>
             <td><b style="color:#ffd700">${s.league}</b></td>
-            <td>${s.match} ${s.hot ? '<span class="hot-tag">HOT</span>' : ''}</td>
+            <td>${s.match}</td>
             <td style="font-family:'Barlow Condensed'; font-weight:800; color:#ffd700; letter-spacing:1px;">${s.winProb}</td>
         </tr>
     `).join('');
 
-    // Matches
+    // Render Prediksi (Akan muncul 2 kartu)
     let matchHtml = "";
     matchData.forEach(l => {
         matchHtml += `<h2>${l.league}</h2>`;
@@ -68,7 +54,7 @@ function renderAll() {
 
 renderAll();
 
-// SLIDER LOGIC
+// BANNER LOGIC (3 Detik)
 let slideIndex = 0;
 const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
