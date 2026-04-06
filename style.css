@@ -10,42 +10,69 @@ body {
   background: url('https://i.imgur.com/Vc5jWLF.png') no-repeat center center/cover;
 }
 
-/* overlay biar teks kebaca */
+/* overlay */
 .overlay {
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* transparan gelap */
+  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
+/* content kiri */
 .content {
+  max-width: 500px;
+  margin-left: 8%;
   color: white;
 }
 
-.content h1 {
-  font-size: 48px;
+h1 {
+  font-size: 52px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.content p {
+.tagline {
   font-size: 18px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* tombol */
+.cta {
+  display: flex;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #ffd700;
-  color: black;
+  padding: 14px 28px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
   transition: 0.3s;
 }
 
-.btn:hover {
+.primary {
+  background: #ffd700;
+  color: black;
+}
+
+.primary:hover {
   background: #ffcc00;
+}
+
+.secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary:hover {
+  background: white;
+  color: black;
+}
+
+.info {
+  font-size: 14px;
+  color: #ccc;
 }
