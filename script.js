@@ -62,11 +62,15 @@ function render(){
 
 render();
 
-// BURGER MENU
+// BURGER MENU MODERN
 const burger = document.getElementById("burger");
-const dropdown = document.getElementById("dropdown");
+const dropdownCard = document.getElementById("dropdownCard");
 
 burger.addEventListener("click", () => {
-  dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
-  dropdown.style.flexDirection = "column";
+  if(dropdownCard.style.display === "flex"){
+    dropdownCard.style.display = "none";
+  } else {
+    dropdownCard.style.display = "flex";
+    dropdownCard.style.flexDirection = "column";
+  }
 });
