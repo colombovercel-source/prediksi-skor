@@ -1,7 +1,7 @@
 /* --- CSS DASAR --- */
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Barlow', sans-serif; color:white; overflow-x: hidden; }
-body::before { content:""; position:fixed; inset:0; background:url('https://i.imgur.com/Vc5jWLF.png') center/cover no-repeat; z-index:-2; }
+body::before { content:""; position:fixed; inset:0; background:url('https://i.imgur.com/zGbaikU.jpeg') center/cover no-repeat; z-index:-2; }
 .bg-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:-1; }
 
 header { display:flex; justify-content:space-between; padding:15px 30px; background:rgba(0,0,0,0.8); border-bottom: 1px solid rgba(255,215,0,0.2); }
