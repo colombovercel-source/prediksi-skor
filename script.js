@@ -50,7 +50,7 @@ function render(){
         <div class="score">${m.score}</div>
         <div class="time">${m.time} WIB</div>
 
-        <a href="https://rinjaniman.com" target="_blank" class="card-btn">
+        <a href="https://rinjaniman.com/sportsbook" target="_blank" class="card-btn">
           Main Sekarang
         </a>
       </div>`;
