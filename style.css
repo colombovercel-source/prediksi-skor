@@ -1,78 +1,1077 @@
-* {
+
+adik saya ambil D4 Teknologi Rekayasa Otomasi (TRO) bagaimana hubungan nya dengan roadmap yang saya perlajarin di link ini https://roadmap-ten-brown.vercel.app/ , coba kamu jelaskan dengan kompleks kaitan nya dan apa saja peluang yang bisa di kombinasikan ?
+
+1 Apr
+
+Fetched: Roadmap Dimas
+Fetched: Roadmap Dimas
+Menarik sekali! Jadi ini roadmap pribadi kamu (Dimas) sebagai AI Engineer → Web3 → Web4, dan adikmu ambil D4 Teknologi Rekayasa Otomasi (TRO). Mari saya breakdown kaitan dan peluang kombinasinya secara mendalam.
+
+Oke, saya sudah punya gambaran lengkap tentang roadmap kamu! Sekarang mari saya buat analisis mendalam tentang keterkaitan D4 TRO adikmu dengan roadmap AI Engineer → Web3 → Web4 kamu.
+
+V
+
+Connecting to visualize...
+Nah, ini penjelasan lengkapnya:
+
+Inti kaitannya: kamu dan adikmu itu saling melengkapi di level yang sangat strategis
+Kamu belajar "otak digital" — AI, Web3, agent otonom. Adikmu belajar "tangan fisik" — mesin, robot, otomasi pabrik. Gabungan keduanya adalah definisi persis dari Industri 4.0 dan bahkan Industri 5.0 yang sedang jadi rebutan global.
+
+Titik irisan paling kuat
+1. AI + IoT (Paling dekat, paling cepat dieksekusi) Adikmu nanti akan bekerja dengan sensor dan embedded system. Kamu di fase 2–3 sudah belajar Python dan ML. Kombinasi ini langsung menghasilkan produk seperti: sistem prediksi kerusakan mesin (predictive maintenance), sensor yang bisa "belajar" pola anomali, atau sistem visi komputer untuk quality control di pabrik. Ini bukan masa depan — ini sudah dibutuhkan pabrik-pabrik di Medan dan Sumatera Utara sekarang.
+
+2. ML + Robotika Di fase 3 kamu belajar deep learning. Adikmu belajar kendali robot dan aktuator. Gabungannya adalah robot yang tidak sekadar mengikuti program kaku (PLC biasa), tapi bisa beradaptasi — robot yang belajar dari pengulangan, bisa mengenali objek berbeda, atau menyesuaikan gerakan berdasarkan umpan balik sensor. Ini adalah edge AI di perangkat keras nyata.
+
+3. Web3 + Supply Chain Manufaktur Di fase 4 kamu masuk Solidity dan smart contract. Adikmu paham alur produksi dan sistem manufaktur. Gabungannya adalah on-chain traceability — setiap produk punya histori di blockchain: dari bahan baku, proses produksi, QC, sampai ke tangan konsumen. Ini sudah diterapkan di industri garmen, makanan, dan farmasi global.
+
+4. AI Agent + SCADA (Paling Frontier) Ini yang paling ambisius. SCADA adalah sistem monitoring & kontrol pabrik besar. Kamu di fase 5 akan belajar AI Agent — sistem yang bisa berpikir dan ambil keputusan sendiri. Bayangkan: AI Agent yang memantau SCADA secara real-time, mendeteksi anomali, dan secara otomatis menyesuaikan parameter produksi tanpa operator manusia. Ini namanya autonomous industrial control.
+
+5. DePIN — Decentralized Physical Infrastructure Networks Ini adalah konsep Web3 terbaru dan langsung relevan dengan TRO. DePIN artinya infrastruktur fisik (sensor, perangkat IoT, jaringan energi) yang dikelola dan diinsentivasi via token blockchain. Contoh nyata: Helium Network (jaringan LoRa), Hivemapper (pemetaan jalan via dashcam), DIMO (data kendaraan). Kamu bisa bangun protokolnya, adikmu bangun perangkat kerasnya.
+
+Peluang bisnis konkret yang bisa dikejar berdua
+Smart Factory SaaS untuk UKM Indonesia — mayoritas pabrik kecil-menengah di Indonesia belum punya sistem otomasi cerdas. Kamu bikin dashboard + AI, adikmu bikin instalasi hardware + integrasinya. Target pasar ada di depan mata.
+
+AI Hardware Startup — produk fisik (IoT device buatan adikmu) + cloud AI + Web3 data layer (buatanmu). Model bisnis seperti Helium tapi versi industri lokal.
+
+Konsultan Digitalisasi Industri 4.0 — ini bisa jalan bahkan sebelum kalian lulus. Banyak pabrik di Sumatera butuh orang yang paham sekaligus hardware dan software, dan itu jarang sekali.
+
+Satu hal yang perlu diperhatikan
+Timeline roadmapmu menunjukkan kamu balik ke Medan di 2030. Adikmu D4 berarti lulus sekitar 2027–2028. Ada jendela 2–3 tahun di mana kalian bisa mulai membangun sesuatu bersama sebelum kamu pulang, bahkan jarak jauh. Proyek GitHub bersama, freelance IoT + AI, atau riset bersama sudah bisa dimulai dari sekarang.
+
+Intinya: adikmu mengisi gap terbesar di roadmapmu — yaitu dunia fisik. Dan kamu mengisi gap terbesar di TRO — yaitu kecerdasan buatan dan desentralisasi. Ini bukan kebetulan, ini sinergi yang sangat langka.
+
+okeii kalau begitu , coba berikan gambaran ke saya dari tahun ke tahun , dan poject apa yang harus di bicarakan bersama ? atau ada dari roadmap saya yang harus di ubah untuk bisa selaras dengan pelajaran kurikulum adik saya ? dan coba perkiraan berapa penghasilan yang bisa di dapatkan di tahun tertentu dengan hasil realistis dan yang terbaik , dari target lokal indonesia / sumatera utara bahkan luar negri?
+
+1 Apr
+
+Menyiapkan visualisasi dan wawasan kontekstual untuk respons komprehensif
+Menyiapkan visualisasi dan wawasan kontekstual untuk respons komprehensif
+V
+
+Connecting to visualize...
+Klik tiap tahun di widget untuk lihat detail lengkapnya. Ini ringkasan poin paling kritis yang perlu kamu tahu:
+
+Tiga momen paling penting dalam timeline ini
+2027 — Proyek pertama harus terjadi. Ini bukan opsional. Kalau kalian hanya belajar masing-masing tanpa satu proyek nyata bersama, sinergi ini tidak akan terbentuk. Bahkan proyek sederhana seperti sensor Arduino yang datanya ditampilkan di website buatanmu sudah cukup untuk membuktikan konsep dan membangun ritme kerja bersama.
+
+2028–2029 — Jendela emas thesis adikmu. Ini kesempatan langka: adikmu butuh topik skripsi yang kuat, dan kamu butuh portofolio proyek AI industri yang nyata. Kalau thesis adikmu tentang predictive maintenance dengan ML yang kamu develop bersama, itu menang di dua sisi sekaligus — adik dapat nilai, kamu dapat case study yang bisa dipresentasikan ke klien.
+
+2030 — Titik kritis, bukan sekadar "pulang". Saat kamu kembali ke Medan, adikmu sudah 1–2 tahun berpengalaman di industri. Itu sangat berharga — dia sudah punya akses ke pabrik, tahu pain points nyata, dan punya kredibilitas di lapangan. Kamu datang bawa AI + Web3. Ini adalah kombinasi yang sangat sulit ditiru orang lain.
+
+Soal penghasilan — angka yang perlu dipahami
+Untuk pasar lokal Sumatera Utara, satu kontrak digitalisasi pabrik kecil bisa bernilai Rp 20–80 juta. Tidak perlu banyak klien untuk hidup sangat layak. Sumatera Utara punya industri kelapa sawit, karet, dan makanan olahan yang besar, dan hampir semuanya belum terdigitalisasi dengan baik.
+
+Untuk pasar internasional, satu klien B2B SaaS dari Asia Tenggara atau Eropa yang membayar $500–2.000/bulan sudah mengubah segalanya. Dengan 5 klien seperti itu, kalian sudah melampaui mayoritas gaji profesional Indonesia.
+
+Yang membuat kombinasi kalian berdua kuat adalah bahwa klien industri tidak mau beli software saja — mereka mau solusi lengkap yang ada orangnya bisa datang ke pabrik dan pasang hardware. Itu persis yang kalian miliki jika berkolaborasi.
+
+menurut kamu secara jujur  saya lebih baik belajar fokus dengan roadmap saya yang sebelum nya hingga menjadi profesional , atau berkolaborasi dengan adik saya ? jawab dengan masuk akal
+
+1 Apr
+
+Menganalisis prioritas fokus versus kolaborasi dengan pertimbangan pragmatis
+Menganalisis prioritas fokus versus kolaborasi dengan pertimbangan pragmatis
+Jawaban jujurnya: fokus dulu ke roadmapmu sendiri sampai Fase 3 selesai (sekitar 2028), baru kolaborasi serius.
+
+Ini alasannya yang masuk akal:
+
+Kenapa bukan kolaborasi sekarang
+Kamu belajar 1 jam/hari. Itu kecil. Setiap menit yang kamu pakai untuk koordinasi, diskusi proyek bersama, atau menyesuaikan pace dengan adikmu adalah menit yang tidak kamu pakai untuk benar-benar naik level. Di tahap awal seperti ini, overhead kolaborasi bisa lebih besar dari manfaatnya.
+
+Ada juga masalah yang lebih mendasar: kamu belum punya sesuatu yang bisa dikolaborasikan. Adikmu juga baru mulai. Dua orang junior yang berkolaborasi sering kali menghasilkan proyek setengah jadi yang tidak selesai, bukan sinergi yang produktif. Kolaborasi yang kuat butuh dua pihak yang masing-masing sudah cukup dalam di bidangnya.
+
+Satu hal lagi — kamu di Sri Lanka, adikmu di Medan. Jarak fisik itu nyata dan mempersulit proyek hardware yang butuh tangan di lapangan.
+
+Kapan kolaborasi menjadi masuk akal
+Sekitar 2028–2029, ketika:
+
+Kamu sudah punya skill ML yang bisa langsung dipakai (bukan masih belajar)
+Adikmu sudah di tahun 3, sudah pegang SCADA dan robotika industri
+Ada kebutuhan nyata yang konkret — misalnya thesis adikmu
+Di titik itu, kalian berdua punya sesuatu untuk ditawarkan satu sama lain. Kolaborasi jadi efisien, bukan beban.
+
+Yang perlu dilakukan sekarang (bukan kolaborasi, tapi alignment)
+Bedakan antara kolaborasi aktif dan alignment pasif. Alignment yang sehat hanya butuh:
+
+Ngobrol 1–2 kali sebulan tentang apa yang sedang masing-masing pelajari
+Adikmu tahu garis besar roadmapmu, kamu tahu kurikulum TRO-nya
+Kalau ada proyek weekend kecil yang tidak makan lebih dari 4–6 jam, itu boleh
+Itu cukup untuk menjaga koneksi tanpa mengorbankan fokus.
+
+Kesimpulan paling jujurnya
+Kolaborasi yang kamu bayangkan itu nyata dan peluangnya besar — tapi itu adalah buah dari 2–3 tahun fokus yang konsisten, bukan jalan pintas untuk dikejar sekarang. Kamu tidak bisa mengkolaborasikan sesuatu yang belum kamu kuasai.
+
+Selesaikan Fase 1 sampai 3 tanpa gangguan. Jadilah seseorang yang layak diajak kolaborasi. Baru kemudian kolaborasi itu akan punya nilai nyata.
+
+okeii kalau begitu coba kamu berikan saya gambaran , untuk ke depan nya adik saya dan juga saya , kami tetap berkolaborasi tetapi adik saya dan saya apakah bisa tetap mengerjakan hal lain nya yang mengahasilkan uang? , dan berarti mulai sekarang nicname spesialis saya  Industrial AI ya ? saya akan mengerjakan materi belajar saya sesuai dengan nicname spesialis saya ?
+
+1 Apr
+
+Memvalidasi rendering widget dan menyiapkan respons
+Memvalidasi rendering widget dan menyiapkan respons
+Sebelum visualisasinya, jawaban jujur dulu soal nickname "Industrial AI":
+
+Ini nickname yang sangat kuat justru karena spesifik. "AI Engineer" ada ribuan. "Industrial AI Specialist" — orang yang paham sekaligus machine learning dan dunia pabrik, sensor, otomasi — itu langka. Kamu tidak perlu ubah roadmapmu secara besar-besaran, yang berubah adalah konteks proyek dan portofoliomu. Setiap fase belajar tetap sama, tapi project yang kamu pilih selalu diarahkan ke dunia industri. Itu yang membedakanmu.
+
+Soal bisa kerja terpisah sambil kolaborasi — ya, justru itu model yang paling sehat. Ini gambarannya:
+
+V
+
+Connecting to visualize...
+Jelajahi tiap tab untuk detail lengkapnya. Tiga poin paling penting yang perlu kamu ingat:
+
+Soal nickname "Industrial AI Specialist" — mulai pakai dari sekarang, bahkan sebelum kamu mahir sekalipun. LinkedIn, GitHub bio, kalau ada yang tanya kamu belajar apa. Ini bukan bohong, ini positioning. Orang yang tahu ke mana arahnya dari awal punya keunggulan besar dibanding yang baru nentuin arah setelah mahir.
+
+Soal kalian bisa tetap kerja masing-masing — justru ini model yang paling sehat dan paling sustainable. Kamu tidak bergantung pada adikmu untuk income, adikmu tidak bergantung padamu. Kolaborasi jadi pilihan, bukan keharusan. Ketika pilihan, kalian akan mengerjakan proyek bersama dengan lebih semangat dan tanpa tekanan.
+
+Satu hal yang paling praktis mulai hari ini — setiap kali kamu pilih proyek latihan di roadmapmu, pilih yang pakai dataset atau konteks industri. Kaggle punya banyak: dataset vibrasi mesin, kualitas produksi, sensor pabrik. Ini tidak menambah beban belajar, hanya mengarahkan fokus. Dalam 2 tahun, portofoliomu akan secara otomatis terbaca sebagai Industrial AI specialist — bukan AI generik.
+
+gimana sih pergerakan teknologi di 5 sampai 10 tahun ke depan , apakah ada kaitan nya dengan roadmap saya ?
+
+1 Apr
+
+Merancang visualisasi interaktif tren teknologi dan kaitannya roadmap
+Merancang visualisasi interaktif tren teknologi dan kaitannya roadmap
+Data riilnya sangat kuat. Mari saya visualisasikan semuanya secara interaktif:
+
+V
+
+Connecting to visualize...
+Jelajahi semua tab di widget — terutama "Kapan kamu tiba" dan "Risiko & antisipasi". Ini poin paling jujur yang perlu kamu pahami:
+
+Kesimpulan dari semua data ini
+Posisi kamu secara timing sangat bagus — dan ini bukan basa-basi. Industrial AI global mencapai $43.6 miliar di 2024 dan diproyeksikan tumbuh ke $153.9 miliar pada 2030 dengan CAGR 23% 
+IoT Analytics
+, dan Agentic AI di manufaktur sudah senilai $5.5 miliar di 2025 dengan prediksi $16.79 miliar pada 2030, di mana predictive maintenance agents menguasai 38% pasar 
+Mordor Intelligence
+ — itu persis area yang akan kamu masuki bersama adikmu.
+
+Yang paling penting untuk dipahami: di sektor manufaktur, edge AI diproyeksikan tumbuh dengan CAGR 23% dari 2026 hingga 2033 — menjadi segmen tercepat dari seluruh pasar edge AI global 
+Grand View Research
+. Kamu belajar ML dan deployment di Fase 3 tepat saat pasar ini sedang akselerasi maksimal.
+
+Untuk DePIN, pasar ini sudah bernilai sekitar $30 miliar di awal 2025 dan telah melewati 1.500 proyek aktif di seluruh dunia 
+Calibraint
+ — tapi hampir semuanya masih di negara maju. Indonesia belum ada pemain serius.
+
+Dan untuk risiko terbesar: sekitar 2035, harga robot humanoid diprediksi di bawah $10.000, dan industri robot akan masuk periode eksplosif 
+DirectIndustry e-Magazine
+. Ini bukan ancaman buat kamu — justru seseorang yang paham Industrial AI + integrasi hardware seperti kamu dan adikmu adalah orang yang akan dibutuhkan untuk deploy dan menjalankan robot-robot itu.
+
+Satu kalimat ringkasnya: teknologi yang sedang kamu pelajari sekarang adalah teknologi yang akan membentuk industri manufaktur global selama 10–15 tahun ke depan. Kamu tidak mengejar sesuatu yang sudah lewat — kamu sedang berlari ke arah yang benar.
+
+coba jelaskan ke saya lebih dalam tentang Posisi kamu secara timing sangat bagus di atas , jelaskan dengan kompleks jika saya selesaikan roadmap sampai 6 fase , peluang apa atau kelebihan apa , dan kekurangan nya apa , langsung jawab ya tanpa menanya balik ke saya
+
+1 Apr
+
+Menyiapkan analisis komprehensif tentang positioning dan roadmap enam fase
+Menyiapkan analisis komprehensif tentang positioning dan roadmap enam fase
+V
+
+Connecting to visualize...
+Jelajahi semua 5 tab — terutama "6 fase skill yang terbentuk" karena bisa diklik per fase. Ini analisis teks yang melengkapi visualnya:
+
+Mengapa timing ini bukan keberuntungan — ini struktural
+Ada pola yang berulang dalam sejarah teknologi: orang yang belajar suatu teknologi tepat saat teknologi itu crossing dari early adopter ke early majority adalah orang yang paling diuntungkan. Mereka tidak perlu berjuang di fase eksperimental yang penuh kegagalan, tapi mereka juga tidak masuk saat pasar sudah jenuh. Industrial AI saat ini baru mewakili 0,1% dari revenue manufaktur, tapi hampir semua CEO besar sudah punya strategi AI — artinya adoption wave sedang di awal kurva eksponensial, bukan di puncak. 
+IoT Analytics
+
+Itu persis posisi kamu di 2030.
+
+Keunggulan terbesar yang sering tidak disadari
+Yang paling underrated dari seluruh posisi kamu adalah fakta bahwa persaingan di pasar Industrial AI masih moderat — lima vendor terbesar hanya menguasai 60% pasar, yang berarti masih ada ruang besar bagi pemain baru. 
+Mordor Intelligence
+ Dan vendor-vendor besar seperti Siemens dan ABB hampir tidak mungkin melayani pabrik sawit kecil di Labuhanbatu dengan harga terjangkau. Itu adalah gap yang kamu dan adikmu bisa isi.
+
+Kelemahan paling kritis yang harus dijawab sekarang
+Dari semua kelemahan yang ada di widget, satu yang paling mengancam bukan soal teknologi — tapi soal konsistensi. Roadmap 4 tahun dengan 1 jam per hari hanya berhasil kalau setiap hari ada output yang terukur. Bukan "belajar", tapi "selesaikan topik X dan commit ke GitHub." Perbedaan antara yang selesai dan tidak selesai bukan soal kecerdasan atau bakat — hampir selalu soal sistem dan akuntabilitas harian.
+
+Kelemahan kedua yang perlu diakui: setiap smart sensor dan edge processor menciptakan potensi vulnerability keamanan baru yang tidak pernah ada di pabrik tradisional. 
+TechAhead
+ Cybersecurity industrial adalah area yang perlu masuk ke dalam pengetahuanmu, terutama kalau produkmu akan diinstall di infrastruktur pabrik nyata. Ini bukan yang kamu pelajari di roadmap sekarang, tapi perlu ditambahkan di Fase 3–4.
+
+Satu kalimat yang merangkum semuanya
+Kamu sedang membangun skill stack yang langka di pasar yang sedang tumbuh 23% per tahun, untuk wilayah yang belum ada pemainnya, bersama orang yang memiliki kemampuan komplementer yang sempurna — dan semua itu akan siap tepat saat pasar membutuhkannya. Itu bukan kebetulan yang bisa terjadi dua kali.
+
+__https://creativemarket.com/slabdsgn/10288699-Personal-Portfolio-Landing-page__ __https://www.behance.net/gallery/182766819/Personal-portfolio-website-landing-page__ __https://dribbble.com/shots/21788500-Personal-Portfolio-Website-Landing-Page__ bagaimana cara saya bisa buat landing page seperti link di atas? dan pada saat selesaikan materi apa agar bisa sempurna bisa membuat seperti contoh di atas ? saya ingin buat projeck portopolio personal saya ? coba jelaskan lankah langkah nya dari mulai materi apa dan ke apa secara jelaskan dengan komplekas dan mudah di pahamin , jawab langsung tanpa bertanya balik ke saya
+
+2 Apr
+
+Merancang panduan interaktif lengkap dengan contoh portfolio landing page
+Merancang panduan interaktif lengkap dengan contoh portfolio landing page
+Saya sudah lihat referensi desainnya — modern, dark/clean aesthetic, bold typography, smooth animation, sections yang rapi. Ini panduan lengkapnya, plus saya akan langsung bangun contoh nyata untuk kamu:
+
+V
+
+Connecting to visualize...
+Sekarang saya langsung bangun contoh nyata portfolio landing page untuk kamu — ini bukan mockup, ini kode yang berjalan sungguhan dengan desain level seperti referensi Dribbble/Behance yang kamu tunjuk:
+
+
+Created a file, read a file
+Created a file, read a file
+Ini portfolio landing page yang sudah jadi untukmu — lengkap dengan animasi scroll reveal, count-up stats, hover effects, dark theme premium, dan responsive mobile. Ini kode nyata yang langsung bisa kamu deploy ke Vercel hari ini.
+
+Sekarang penjelasan yang paling penting:
+
+Kapan kamu bisa bikin ini sendiri dari nol?
+Ada 3 level jawaban jujurnya:
+
+Versi 60% seperti ini — bisa kamu buat setelah menyelesaikan Tahap 1 dan 2 dari panduan di widget (sekitar 6–8 minggu belajar HTML dan CSS fokus). Artinya sekitar Maret–April 2027 kalau konsisten 1 jam sehari.
+
+Versi 100% dengan animasi scroll seperti referensi Dribbble kamu — butuh tambahan Tahap 3 dan 4 (CSS animasi + JavaScript DOM). Sekitar Oktober–November 2027. Di sinilah Intersection Observer dan @keyframes yang ada di file ini kamu tulis sendiri tanpa lihat kode orang lain.
+
+Versi premium dengan GSAP seperti studio desain dunia — Tahap 6, sekitar pertengahan 2028. Tapi di titik ini kamu sudah Fase 2 roadmap — dan portfoliomu sudah punya proyek AI nyata yang bisa dipajang, bukan hanya tampilan cantik.
+
+Satu hal yang paling penting soal portfolio ini
+Portfolio kosong yang cantik tidak ada nilainya. Portfolio yang jelek tapi isinya proyek nyata jauh lebih berharga. Strategi terbaikmu: deploy portfolio ini sekarang dengan konten placeholder, update proyek nyata setiap kali kamu selesaikan satu topik di roadmap, dan biarkan ia tumbuh organik. Dalam 2 tahun, portfolio itu akan mencerminkan perjalanan nyata seorang Industrial AI Specialist yang konsisten — dan itu tidak bisa dipalsukan.
+
+Index
+Code · HTML 
+saya ingin tahu lebih dalam tentang gsap , itu apa dan bagaimana
+
+2 Apr
+
+Menyiapkan penjelasan mendalam tentang GSAP dan fungsinya
+Menyiapkan penjelasan mendalam tentang GSAP dan fungsinya
+GSAP singkatan dari GreenSock Animation Platform — ini adalah library JavaScript yang khusus dibuat untuk menggerakkan elemen di halaman web. Kalau CSS animation itu seperti mobil manual yang kamu atur sendiri gigi per gigi, GSAP itu seperti mobil sport otomatis yang jauh lebih halus, lebih cepat, dan punya kontrol yang jauh lebih presisi.
+
+Dipakai oleh Apple, Google, Nike, Awwwards — hampir semua website premium dunia yang punya animasi kelas tinggi menggunakan GSAP di baliknya.
+
+Cara kerjanya sederhana: kamu bilang ke GSAP "gerakkan elemen ini, dari kondisi A ke kondisi B, dalam waktu sekian detik, dengan kurva kelembutan tertentu" — dan GSAP yang urus sisanya. Mainkan playground di bawah untuk merasakan langsung:
+
+V
+
+Connecting to visualize...
+Mainkan semua tab di playground itu — geser slider, klik tombol, rasakan perbedaan tiap easing. Ini penjelasan lengkapnya dalam teks:
+
+GSAP itu apa sebenarnya?
+GSAP adalah library JavaScript yang tugasnya satu: mengubah nilai properti CSS sebuah elemen dari A ke B dengan sangat mulus. Yang membuatnya jauh lebih unggul dari CSS animation biasa ada tiga hal.
+
+Pertama, presisi dan konsistensi. CSS animation kadang "patah" di browser tertentu atau saat halaman sibuk. GSAP punya engine sendiri yang terus mengecek 60 kali per detik (60fps) untuk memastikan animasi berjalan sempurna di semua kondisi.
+
+Kedua, kontrol penuh. Dengan CSS kamu bisa pause? Susah. Reverse? Ribet. Dengan GSAP, tl.pause(), tl.reverse(), tl.seek(2) — semua satu baris kode.
+
+Ketiga, plugin ekosistem. GSAP punya plugin seperti ScrollTrigger (animasi dikontrol scroll), SplitText (animasi per huruf), Draggable (elemen bisa didrag), dan banyak lagi. Inilah yang dipakai studio desain Awwwards.
+
+Empat konsep inti yang harus kamu kuasai
+gsap.to() — animasi dari kondisi sekarang ke kondisi target. Paling sering dipakai untuk hover, klik, atau efek interaktif.
+
+gsap.from() — animasi dari kondisi yang kamu tentukan ke kondisi sekarang. Ini yang bikin elemen "muncul" dengan elegan saat halaman load atau saat masuk viewport.
+
+gsap.timeline() — menggabungkan banyak animasi menjadi satu sequence terkoordinasi. Tanpa ini, kamu harus hitung setTimeout manual yang sangat berantakan.
+
+ScrollTrigger — mengikat animasi ke posisi scroll. Ini adalah plugin yang paling membuat perbedaan visual antara website biasa dan website premium.
+
+Kapan kamu mulai belajar GSAP?
+Jujurnya, GSAP baru masuk akal dipelajari setelah kamu solid di JavaScript DOM — yaitu sekitar Tahap 4 dari panduan belajar yang tadi. Kalau belum paham querySelector, addEventListener, dan cara kerja CSS properties di JavaScript, GSAP akan terasa seperti sihir yang tidak bisa kamu kendalikan. Tapi begitu kamu paham dasarnya, GSAP adalah salah satu skill yang paling menyenangkan untuk dipelajari karena hasilnya langsung kelihatan dan sangat memuaskan secara visual.
+
+"Kamu adalah web designer berpengalaman 10 tahun yang spesialis conversion optimization. Saya punya toko kelontong di Medan dengan: - 500 produk - Target customer ibu RT 25-45 tahun - Kompetitor: Alfamart, Indomaret - Unique value: delivery 1 jam dalam radius 5 km - Pain point customer: tidak mau keluar rumah Buat landing page yang: 1. Komunikasikan unique value dalam 5 detik 2. Social proof yang meyakinkan 3. CTA yang fokus ke WhatsApp order 4. Mobile-first karena 90% traffic dari HP 5. Load time under 2 detik Format output: HTML + Tailwind CSS yang bisa langsung di-deploy ke Vercel."
+
+5 Apr
+
+Merancang landing page konversi tinggi dengan desain hangat dan CTA WhatsApp
+Merancang landing page konversi tinggi dengan desain hangat dan CTA WhatsApp
+Landing page siap deploy. Ini breakdown setiap keputusan konversi yang diambil:
+
+Keputusan conversion optimization yang disengaja
+5 detik pertama: Headline "Belanja Tanpa Keluar Rumah" langsung menyentuh pain point ibu RT — tidak mau keluar rumah. "1 JAM" dalam huruf besar di bawahnya langsung menjawab "kapan datangnya?". Tidak ada gambar besar yang lambat diload, tidak ada intro yang panjang.
+
+Sticky top bar dengan live indicator (titik berkedip hijau) menciptakan sense of presence — toko ini sedang aktif sekarang, bukan website yang sudah lama dibuat.
+
+Ticker tape kuning bergerak terus mengulang trust signals tanpa memakan ruang layout. Ibu-ibu yang tidak scroll pun tetap terpajan pesan "gratis ongkir" berkali-kali.
+
+WhatsApp CTA bukan form — ini keputusan terpenting. Ibu RT 25–45 tahun jauh lebih nyaman chat WA daripada mengisi form checkout. Setiap tombol WA sudah pre-filled dengan pesan spesifik sesuai konteks (kategori produk, cek area, order umum).
+
+Tombol WA floating di pojok kanan bawah selalu kelihatan saat scroll — tidak pernah menghilang. Ini satu-satunya elemen yang boleh sticky di mobile.
+
+Count-up animation pada statistik (1.200+, 340+, 42 menit) baru berjalan saat user scroll ke section itu — membuat angka terasa "live" dan menarik perhatian.
+
+Testimonial dengan nama dan kelurahan spesifik jauh lebih meyakinkan dari testimoni generik. Ibu yang baca dan tinggal di Medan Selayang langsung merasa "oh, dekat rumah saya."
+
+Section area coverage menjawab keberatan terbesar sebelum ditanya: "apakah saya masuk area antar?" Kalau tidak ada di list, ada tombol WA untuk tanya langsung.
+
+Yang harus diganti sebelum deploy
+Ganti semua 628XXXXXXXXXX dengan nomor WA asli toko, sesuaikan nama jalan di footer, dan update daftar kelurahan yang masuk radius 5 km. Setelah itu langsung push ke GitHub dan connect ke Vercel — siap live dalam 2 menit.
+
+Kelontong busari
+Code · HTML 
+saya ingin belajar bahasa inggris dari nol bersama kamu secara teks setiap hari satu materi kecil saja ringan saja ya , apakah kamu bisa ?
+
+5 Apr
+
+Endorsed daily English lessons and prepared inaugural instruction
+Endorsed daily English lessons and prepared inaugural instruction
+Bisa banget! Ini akan jadi sesi belajar yang santai, ringan, dan tidak membebani — satu materi kecil per hari, seperti ngobrol biasa.
+
+Karena kamu mulai dari nol, kita mulai dari yang paling dasar dan paling sering dipakai dalam kehidupan sehari-hari. Tidak ada grammar yang rumit dulu, tidak ada hafalan panjang.
+
+Materi Hari 1 — Menyapa Orang 👋
+Dalam bahasa Inggris, ada dua cara menyapa tergantung waktu:
+
+Pagi → Good morning (dibaca: gud mor-ning) Siang → Good afternoon (dibaca: gud af-ter-nun) Malam → Good evening (dibaca: gud iv-ning)
+
+Dan satu kata yang bisa dipakai kapan saja:
+
+Hello (dibaca: he-lo) — artinya: halo Hi (dibaca: hai) — artinya: hai, lebih santai
+
+Cara pakainya sangat mudah:
+Kalau ketemu orang pagi hari, bilang saja: "Good morning!"
+
+Kalau tidak tahu sudah jam berapa, aman pakai: "Hello!" atau "Hi!"
+
+Latihan kecil untuk kamu hari ini:
+Coba jawab pertanyaan ini pakai bahasa Inggris ya — santai saja, tidak ada yang salah:
+
+Sekarang di tempatmu sudah jam berapa? Coba sapa saya pakai kata yang tepat dari materi hari ini. 😊
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RINJANI4D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="content">
+      <h1>RINJANI4D</h1>
+      <p class="tagline">Platform terpercaya dengan kemenangan nyata setiap hari</p>
+      <div class="cta">
+        <a href="https://rinjaniman.com" class="btn primary">DAFTAR SEKARANG</a>
+        <a href="https://rinjaniman.com" class="btn secondary">LOGIN</a>
+      </div>
+      <p class="info">Minimal depo 10K • WD cepat • Support 24 jam</p>
+    </div>
+  </div>
+</body>
+</html>
+
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; } body { height: 100vh; background: url('https://i.imgur.com/Vc5jWLF.png') no-repeat center center/cover; } /* overlay */ .overlay { height: 100%; width: 100%; background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2)); display: flex; align-items: center; } /* content kiri */ .content { max-width: 500px; margin-left: 8%; color: white; } h1 { font-size: 52px; font-weight: bold; margin-bottom: 10px; } .tagline { font-size: 18px; margin-bottom: 30px; color: #ddd; } /* tombol */ .cta { display: flex; gap: 15px; margin-bottom: 20px; } .btn { padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 8px; transition: 0.3s; } .primary { background: 
+#ffd700; color: black; } .primary:hover { background: 
+#ffcc00; } .secondary { border: 2px solid white; color: white; } .secondary:hover { background: white; color: black; } .info { font-size: 14px; color: #ccc; }
+saya mau buat landing page ini menjadi tampilan yang menampilan prediksi skor beberapa 5 sampai 10 pertandingan sepak bola  mungkin  yang enak di lihat dan bisa saya edit jika pertandingan nya selesai dari kode nya , apakah kamu ada rekomendasi ? untuk di taruh ke github dan deploy ke vercel
+
+Show less
+12:01
+
+Evaluated request legitimacy and pivoted toward football predictions project
+Evaluated request legitimacy and pivoted toward football predictions project
+Bisa! Ini saya bangun langsung — landing page prediksi skor sepak bola yang clean, mudah diedit dari kode, dan siap deploy ke Vercel.
+
+
+Viewed a file, created a file, ran a command
+Viewed a file, created a file, ran a command
+File siap — satu file HTML, langsung deploy ke Vercel. Ini panduan lengkap cara pakainya:
+
+Cara edit pertandingan setiap hari
+Buka file, cari bagian bertulisan EDIT DATA PERTANDINGAN DI SINI. Semua data ada di variabel matchData. Setiap pertandingan punya struktur seperti ini:
+
+js
+{
+  time:      "21:00",       // jam tayang WIB
+  status:    "upcoming",    // upcoming / live / done
+  home:      "Manchester City",
+  homeEmoji: "🔵",
+  away:      "Arsenal",
+  awayEmoji: "🔴",
+  predict:   "1-1",        // prediksi skormu
+  result:    "",           // ← ISI INI setelah pertandingan selesai
+  homeWin:   48,           // % peluang menang home
+  draw:      26,
+  awayWin:   26,
+  tip:       "BTTS",       // tip singkat
+  note:      "Keterangan singkat"
+}
+Cukup 3 hal yang diubah setelah pertandingan selesai: ganti status dari "upcoming" ke "done", isi result dengan skor asli seperti "2-1", simpan file, push ke GitHub — Vercel otomatis update.
+
+Cara deploy ke Vercel
+Buat folder baru, taruh file index.html di dalamnya
+Upload ke GitHub sebagai repository baru
+Masuk ke vercel.com → Import repository itu → Deploy
+Setiap kali kamu edit dan push ke GitHub, website otomatis update dalam 30 detik
+Fitur yang sudah ada
+Filter tab otomatis (Semua / Belum Main / Live / Selesai), bar probabilitas menang/seri/kalah, badge Live dengan animasi, tanggal dan waktu update otomatis, tampilan skor final vs prediksi, dan pengelompokan per liga. Semua mobile-friendly, satu file, tidak butuh backend.
+
+Prediksi bola
+Code · HTML 
+bantu buatkan saya code untuk untuk di taruh ke github dan deploy ke vercel dengan baground gambar link ini https://i.imgur.com/Vc5jWLF.png 
+buat kan file terpisah ya , HTML dan css nya
+
+12:07
+
+Merancang halaman prediksi sepak bola dengan gambar latar dan file terpisah
+Merancang halaman prediksi sepak bola dengan gambar latar dan file terpisah
+Gambarnya tidak bisa saya buka langsung, tapi URL-nya sudah saya pakai dari kode aslimu. Saya buatkan 3 file terpisah siap deploy — index.html, style.css, dan vercel.json.
+
+
+Created 3 files, ran a command, read a file
+Created 3 files, ran a command, read a file
+
+Main HTML file for football predictions site with background image
+index.html
+
+CSS file for football predictions site - dark glassmorphism over background image
+style.css
+
+Vercel config file
+vercel.json
+
+Copy all 3 files to outputs
+
+Script
+
+Presented 3 files
+Done
+3 file siap — index.html, style.css, dan vercel.json. Ini cara pakainya:
+
+Struktur folder di GitHub
+prediksigol/
+├── index.html      ← rename dari prediksigol-index
+├── style.css       ← rename dari prediksigol-style
+└── vercel.json     ← rename dari prediksigol-vercel
+Pastikan nama filenya persis seperti di atas sebelum di-upload ke GitHub, karena index.html memanggil style.css dengan nama itu.
+
+Cara deploy ke Vercel
+Buat repository baru di GitHub, upload ketiga file itu
+Masuk ke vercel.com → klik Add New Project → Import repository GitHub kamu
+Klik Deploy — selesai, website langsung live
+Cara edit pertandingan setiap hari
+Buka index.html, cari tulisan EDIT DATA PERTANDINGAN DI SINI. Tiga hal yang sering diubah:
+
+Sebelum pertandingan — pastikan status: "upcoming" dan result: ""
+
+Saat pertandingan berlangsung — ganti ke status: "live" dan isi result dengan skor sementara seperti "1-0"
+
+Setelah selesai — ganti ke status: "done" dan update result dengan skor akhir
+
+Setelah edit, push ke GitHub → Vercel otomatis update dalam 30 detik.
+
+Prediksigol index
+Code · HTML 
+Prediksigol style
+Code · CSS 
+Prediksigol vercel
+Code · JSON 
+
+You've used 90% of your session limit
+Upgrade
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Prediksigol style · CSS
+Copy
+
+/* ════════════════════════════════════════════
+   style.css — PrediksiGol
+   Background: https://i.imgur.com/Vc5jWLF.png
+════════════════════════════════════════════ */
+ 
+/* ─── RESET ─── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
-
+ 
+/* ─── VARIABLES ─── */
+:root {
+  --glass-bg:      rgba(8, 12, 20, 0.72);
+  --glass-border:  rgba(255, 255, 255, 0.08);
+  --glass-card:    rgba(12, 18, 30, 0.80);
+  --glass-card2:   rgba(16, 24, 38, 0.85);
+  --accent:        #00e676;
+  --accent2:       #ffd600;
+  --live-color:    #ff3d57;
+  --text:          #e8eaf0;
+  --text-muted:    #7a8399;
+  --font-head:     'Barlow Condensed', sans-serif;
+  --font-body:     'Barlow', sans-serif;
+  --radius-card:   14px;
+  --blur:          backdrop-filter: blur(18px) saturate(1.4);
+}
+ 
+/* ─── BASE ─── */
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+ 
 body {
-  height: 100vh;
-  background: url('https://i.imgur.com/Vc5jWLF.png') no-repeat center center/cover;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--text);
+  min-height: 100vh;
+  background-color: #080c14;
+  position: relative;
+  overflow-x: hidden;
 }
-
-/* overlay */
-.overlay {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+ 
+/* ─── BACKGROUND IMAGE + OVERLAY ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('https://i.imgur.com/Vc5jWLF.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+ 
+/* dark gradient overlay supaya teks terbaca */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(4, 8, 16, 0.88) 0%,
+    rgba(8, 14, 24, 0.78) 50%,
+    rgba(4, 10, 20, 0.90) 100%
+  );
+  z-index: -1;
+}
+ 
+/* ─── HEADER ─── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  height: 58px;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background: rgba(6, 10, 18, 0.80);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid var(--glass-border);
 }
-
-/* content kiri */
-.content {
-  max-width: 500px;
-  margin-left: 8%;
-  color: white;
-}
-
-h1 {
-  font-size: 52px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #ddd;
-}
-
-/* tombol */
-.cta {
+ 
+.logo {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  padding: 14px 28px;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--text);
   text-decoration: none;
-  font-weight: bold;
+}
+ 
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
   border-radius: 8px;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
 }
-
-.primary {
-  background: #ffd700;
-  color: black;
+ 
+.logo span { color: var(--accent); }
+ 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-
-.primary:hover {
-  background: #ffcc00;
+ 
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 61, 87, 0.12);
+  border: 1px solid rgba(255, 61, 87, 0.28);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--live-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-
-.secondary {
-  border: 2px solid white;
-  color: white;
+ 
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--live-color);
+  border-radius: 50%;
+  animation: livePulse 1.3s ease-in-out infinite;
 }
-
-.secondary:hover {
-  background: white;
-  color: black;
+ 
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .35; transform: scale(.65); }
 }
-
-.info {
+ 
+.update-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+ 
+/* ─── HERO SECTION ─── */
+.hero {
+  padding: 3rem 1.5rem 2.5rem;
+  position: relative;
+}
+ 
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--glass-border) 30%,
+    var(--glass-border) 70%,
+    transparent
+  );
+}
+ 
+.hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+ 
+.hero-date {
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+ 
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 8vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+ 
+.hero h1 em {
+  color: var(--accent);
+  font-style: normal;
+}
+ 
+.hero-sub {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  max-width: 460px;
+  line-height: 1.6;
+}
+ 
+.stats-strip {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+ 
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+ 
+.stat-item strong {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent2);
+  line-height: 1;
+}
+ 
+.stat-item span {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+ 
+/* ─── FILTER TABS ─── */
+.filter-wrap {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: rgba(6, 10, 18, 0.70);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 0 1rem;
+}
+ 
+.filter-wrap::-webkit-scrollbar { display: none; }
+ 
+.filter-tab {
+  padding: 0.8rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+ 
+.filter-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+ 
+.filter-tab:hover { color: var(--text); }
+ 
+/* ─── MAIN CONTAINER ─── */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+ 
+/* ─── LEAGUE GROUP ─── */
+.league-group {
+  margin-bottom: 2rem;
+}
+ 
+.league-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.65rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  border-bottom: none;
+}
+ 
+.league-flag { font-size: 1.1rem; }
+ 
+.league-name {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+ 
+.league-count {
+  margin-left: auto;
+  font-size: 0.68rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 2px 8px;
+  color: var(--text-muted);
+}
+ 
+/* ─── MATCH CARD ─── */
+.match-card {
+  background: var(--glass-card);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid var(--glass-border);
+  border-top: none;
+  padding: 1rem 1.15rem;
+  position: relative;
+  transition: background 0.2s ease;
+  animation: fadeUp 0.4s ease both;
+}
+ 
+.match-card:last-child {
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
+ 
+.match-card:hover {
+  background: var(--glass-card2);
+}
+ 
+/* left status strip */
+.match-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+}
+ 
+.match-card.status-upcoming::before { background: rgba(122, 131, 153, 0.3); }
+.match-card.status-live::before     { background: var(--live-color); }
+.match-card.status-done::before     { background: rgba(255, 255, 255, 0.08); }
+ 
+/* stagger animation */
+.match-card:nth-child(1) { animation-delay: 0.04s; }
+.match-card:nth-child(2) { animation-delay: 0.08s; }
+.match-card:nth-child(3) { animation-delay: 0.12s; }
+.match-card:nth-child(4) { animation-delay: 0.16s; }
+.match-card:nth-child(5) { animation-delay: 0.20s; }
+.match-card:nth-child(6) { animation-delay: 0.24s; }
+ 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* ─── MATCH META ─── */
+.match-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+ 
+.match-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+ 
+/* ─── STATUS BADGES ─── */
+.badge {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+ 
+.badge-upcoming { background: rgba(122, 131, 153, 0.14); color: var(--text-muted); }
+.badge-live     { background: rgba(255, 61, 87, 0.15);   color: var(--live-color); }
+.badge-done     { background: rgba(255, 255, 255, 0.06); color: var(--text-muted); }
+ 
+/* ─── TEAMS ROW ─── */
+.teams-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+ 
+.team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ 
+.team.away {
+  flex-direction: row-reverse;
+}
+ 
+.team-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
-  color: #ccc;
+  flex-shrink: 0;
 }
+ 
+.team-name {
+  font-family: var(--font-head);
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+ 
+.team.away .team-name { text-align: right; }
+ 
+/* ─── SCORE AREA ─── */
+.score-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 88px;
+}
+ 
+.score-predict {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+ 
+.score-predict.faded { opacity: 0.4; }
+ 
+.score-box {
+  font-family: var(--font-head);
+  font-size: 1.55rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+ 
+.score-box.small {
+  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+ 
+.score-sep {
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 300;
+}
+ 
+.score-label {
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+ 
+/* result score */
+.score-result {
+  font-family: var(--font-head);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-top: 2px;
+}
+ 
+.score-result-label {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+ 
+.score-final-done, .score-result-label.score-final-done { color: var(--accent2); }
+.score-final-live, .score-result-label.score-final-live { color: var(--live-color); }
+ 
+/* ─── ANALYSIS ROW ─── */
+.analysis-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 7px 10px;
+}
+ 
+.bar-pct {
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 28px;
+}
+ 
+.bar-pct-home { color: var(--accent); text-align: right; }
+.bar-pct-away { color: var(--live-color); text-align: left; }
+ 
+.bar-track {
+  flex: 1;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  gap: 1px;
+}
+ 
+.bar-segment {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+ 
+.bar-home { background: var(--accent); }
+.bar-draw { background: var(--accent2); }
+.bar-away { background: var(--live-color); }
+ 
+.tip-badge {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 3px 9px;
+  border-radius: 5px;
+  background: rgba(0, 230, 118, 0.11);
+  color: var(--accent);
+  border: 1px solid rgba(0, 230, 118, 0.2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+ 
+/* ─── MATCH NOTE ─── */
+.match-note {
+  font-size: 0.71rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  padding-left: 2px;
+  line-height: 1.5;
+}
+ 
+/* ─── EMPTY STATE ─── */
+.empty-state {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+ 
+/* ─── FOOTER ─── */
+footer {
+  background: rgba(4, 8, 14, 0.80);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--glass-border);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  line-height: 1.9;
+}
+ 
+footer strong { color: var(--text); }
+ 
+/* ─── RESPONSIVE ─── */
+@media (max-width: 520px) {
+  header { padding: 0 1rem; }
+  .hero  { padding: 2rem 1rem 2rem; }
+  main   { padding: 1rem; }
+ 
+  .team-name  { font-size: 0.82rem; }
+  .score-box  { width: 34px; height: 34px; font-size: 1.35rem; }
+  .hero h1    { font-size: 2rem; }
+  .stats-strip { gap: 1.25rem; }
+  .stat-item strong { font-size: 1.5rem; }
+ 
+  .update-time { display: none; }
+}
+ 
+@media (max-width: 360px) {
+  .team-logo  { display: none; }
+  .score-box  { width: 30px; height: 30px; font-size: 1.2rem; }
+  .teams-row  { gap: 0.4rem; }
+}
+ 
