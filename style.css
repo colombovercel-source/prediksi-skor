@@ -1,63 +1,72 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Barlow', sans-serif; color:white; overflow-x: hidden; }
 
-/* BACKGROUND SETTINGS */
+/* BACKGROUND SETTINGS TERBARU */
 body::before {
   content:""; position:fixed; inset:0;
+  /* BACKGROUND BARU */
   background:url('https://i.imgur.com/zGbaikU.jpeg') center/cover no-repeat;
   z-index:-2;
   filter: brightness(0.55);
 }
 .bg-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:-1; }
 
-/* HEADER */
+/* HEADER & LOGO BARU */
 header { display:flex; justify-content:space-between; align-items: center; padding:10px 30px; background:rgba(0,0,0,0.9); border-bottom: 1px solid #ffd700; }
-.logo img { height: 50px; width: auto; object-fit: contain; }
+.logo img { height: 50px; width: auto; object-fit: contain; display: block; }
 
-/* RUNNING TEXT */
+/* RUNNING TEXT EVENT */
 .marquee-container { background: #b32e2e; height: 35px; display: flex; align-items: center; border-bottom: 2px solid #ffd700; }
 .marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; }
 .event-tag { background: #ffd700; color: #000; font-weight: 800; padding: 0 15px; height: 35px; line-height: 35px; font-family: 'Barlow Condensed'; }
 
-/* FIX BANNER DISTORSI (PENTING) */
+/* FIX BANNER SLIDER DISTORSI (PERBAIKAN TOTAL) */
 .banner-slider { 
     width: 100%; 
     position: relative; 
     overflow: hidden; 
     background: #000; 
-    aspect-ratio: 21 / 9; /* Mengunci bentuk kotak banner */
+    /* Mengunci rasio 21:9 secara paksa untuk wadah banner */
+    aspect-ratio: 21 / 9; 
     border-bottom: 2px solid #ffd700;
 }
 .slider-wrapper { display: flex; transition: transform 0.8s ease-in-out; height: 100%; }
-.slide { min-width: 100%; height: 100%; }
+.slide { min-width: 100%; height: 100%; position: relative; }
 .slide img { 
+    position: absolute;
+    top: 0; left: 0;
     width: 100%; 
     height: 100%; 
-    object-fit: cover; /* Gambar tidak akan penyok, pinggiran menyesuaikan kotak */
+    /* 'cover' memastikan gambar dipotong rapi daripada ditekan/gepeng */
+    object-fit: cover; 
     object-position: center; 
     display: block; 
 }
 
 .prev-btn, .next-btn {
     position: absolute; top: 50%; transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6); color: white; border: none; font-size: 24px; padding: 15px; cursor: pointer; z-index: 10;
+    background: rgba(0, 0, 0, 0.6); color: white; border: none;
+    font-size: 24px; padding: 15px; cursor: pointer; z-index: 10;
+    transition: 0.3s;
 }
 .next-btn { right: 0; border-radius: 5px 0 0 5px; }
 .prev-btn { left: 0; border-radius: 0 5px 5px 0; }
+.prev-btn:hover, .next-btn:hover { background: #ffd700; color: #000; }
 
 .dots-container { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
 .dot { width: 10px; height: 10px; background: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; }
 .dot.active { background: #ffd700; width: 25px; border-radius: 10px; }
 
-/* TABLE WIN PROBABILITY */
+/* SCHEDULE TABLE & WIN PROBABILITY */
 .schedule-section { padding: 30px 20px; max-width: 1200px; margin: auto; }
 .section-title { font-weight: 800; color: #ffd700; margin-bottom: 15px; font-size: 18px; border-left: 4px solid #ffd700; padding-left: 15px; }
-.table-container { background: rgba(0,0,0,0.8); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,215,0,0.2); }
+.table-container { background: rgba(0,0,0,0.8); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,215,0,0.2); backdrop-filter: blur(5px); }
 .schedule-table { width: 100%; border-collapse: collapse; }
-.schedule-table th { background: rgba(255,215,0,0.15); color: #ffd700; padding: 15px; font-size: 13px; text-align: left; }
+.schedule-table th { background: rgba(255,215,0,0.15); color: #ffd700; padding: 15px; font-size: 13px; text-align: left; text-transform: uppercase; }
 .schedule-table td { padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; }
+.hot-tag { background: #ff4d4d; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-left: 8px; font-weight: bold; }
 
-/* CARDS PREDIKSI (2 KARTU) */
+/* HERO & CARDS (TAMPILAN 2 KARTU) */
 .hero { text-align:center; padding:50px 20px; }
 .hero h1 { font-size:38px; }
 .hero em { color:#ffd700; font-style: normal; }
