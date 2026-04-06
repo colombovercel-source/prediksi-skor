@@ -1,88 +1,79 @@
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Barlow', sans-serif; color:white; overflow-x: hidden; }
+/* RESET DASAR */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Barlow', sans-serif; color: white; background: #000; overflow-x: hidden; }
 
-/* BACKGROUND SETTINGS TERBARU */
+/* BACKGROUND UTAMA */
 body::before {
-  content:""; position:fixed; inset:0;
-  /* BACKGROUND BARU */
-  background:url('https://i.imgur.com/zGbaikU.jpeg') center/cover no-repeat;
-  z-index:-2;
-  filter: brightness(0.55);
+    content: ""; position: fixed; inset: 0;
+    background: url('https://i.imgur.com/zGbaikU.jpeg') center/cover no-repeat;
+    z-index: -2; filter: brightness(0.4);
 }
-.bg-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:-1; }
+.bg-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: -1; }
 
-/* HEADER & LOGO BARU */
-header { display:flex; justify-content:space-between; align-items: center; padding:10px 30px; background:rgba(0,0,0,0.9); border-bottom: 1px solid #ffd700; }
-.logo img { height: 50px; width: auto; object-fit: contain; display: block; }
+/* HEADER */
+header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: rgba(0,0,0,0.9); border-bottom: 1px solid #ffd700; }
+.logo img { height: 45px; width: auto; object-fit: contain; }
+.menu-icon { color: #ffd700; font-size: 24px; cursor: pointer; }
 
-/* RUNNING TEXT EVENT */
+/* MARQUEE */
 .marquee-container { background: #b32e2e; height: 35px; display: flex; align-items: center; border-bottom: 2px solid #ffd700; }
-.marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; }
-.event-tag { background: #ffd700; color: #000; font-weight: 800; padding: 0 15px; height: 35px; line-height: 35px; font-family: 'Barlow Condensed'; }
+.marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; width: 100%; }
 
-/* FIX BANNER SLIDER DISTORSI (PERBAIKAN TOTAL) */
+/* FIX BANNER SLIDER (TEKNIK ANTI-GEPENG) */
 .banner-slider { 
     width: 100%; 
     position: relative; 
     overflow: hidden; 
-    background: #000; 
-    /* Mengunci rasio 21:9 secara paksa untuk wadah banner */
-    aspect-ratio: 21 / 9; 
+    background: #000;
+    aspect-ratio: 21 / 9; /* Kunci rasio wadah */
     border-bottom: 2px solid #ffd700;
 }
-.slider-wrapper { display: flex; transition: transform 0.8s ease-in-out; height: 100%; }
+.slider-wrapper { display: flex; transition: transform 0.6s ease-in-out; height: 100%; }
 .slide { min-width: 100%; height: 100%; position: relative; }
 .slide img { 
-    position: absolute;
-    top: 0; left: 0;
     width: 100%; 
     height: 100%; 
-    /* 'cover' memastikan gambar dipotong rapi daripada ditekan/gepeng */
-    object-fit: cover; 
+    object-fit: cover; /* Ini yang membuat gambar tidak penyok/gepeng */
     object-position: center; 
     display: block; 
 }
 
+/* NAVIGASI SLIDER */
 .prev-btn, .next-btn {
     position: absolute; top: 50%; transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6); color: white; border: none;
-    font-size: 24px; padding: 15px; cursor: pointer; z-index: 10;
-    transition: 0.3s;
+    background: rgba(0,0,0,0.6); color: #ffd700; border: none; font-size: 24px; padding: 10px; cursor: pointer; z-index: 5;
 }
 .next-btn { right: 0; border-radius: 5px 0 0 5px; }
 .prev-btn { left: 0; border-radius: 0 5px 5px 0; }
-.prev-btn:hover, .next-btn:hover { background: #ffd700; color: #000; }
 
 .dots-container { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
-.dot { width: 10px; height: 10px; background: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; }
+.dot { width: 10px; height: 10px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: 0.3s; }
 .dot.active { background: #ffd700; width: 25px; border-radius: 10px; }
 
-/* SCHEDULE TABLE & WIN PROBABILITY */
-.schedule-section { padding: 30px 20px; max-width: 1200px; margin: auto; }
-.section-title { font-weight: 800; color: #ffd700; margin-bottom: 15px; font-size: 18px; border-left: 4px solid #ffd700; padding-left: 15px; }
-.table-container { background: rgba(0,0,0,0.8); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,215,0,0.2); backdrop-filter: blur(5px); }
-.schedule-table { width: 100%; border-collapse: collapse; }
-.schedule-table th { background: rgba(255,215,0,0.15); color: #ffd700; padding: 15px; font-size: 13px; text-align: left; text-transform: uppercase; }
-.schedule-table td { padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; }
-.hot-tag { background: #ff4d4d; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-left: 8px; font-weight: bold; }
+/* TABEL JADWAL */
+.schedule-section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+.section-title { font-weight: 800; color: #ffd700; margin-bottom: 15px; border-left: 4px solid #ffd700; padding-left: 15px; font-size: 18px; }
+.table-container { background: rgba(0,0,0,0.85); border-radius: 12px; overflow-x: auto; border: 1px solid rgba(255,215,0,0.2); }
+table { width: 100%; border-collapse: collapse; min-width: 600px; }
+th { background: rgba(255,215,0,0.1); color: #ffd700; padding: 15px; text-align: left; font-size: 13px; text-transform: uppercase; }
+td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; }
 
-/* HERO & CARDS (TAMPILAN 2 KARTU) */
-.hero { text-align:center; padding:50px 20px; }
-.hero h1 { font-size:38px; }
-.hero em { color:#ffd700; font-style: normal; }
-.btn-primary { display:inline-block; margin-top:15px; padding:12px 28px; background:#ffd700; color:black; text-decoration:none; border-radius:8px; font-weight: bold; }
+/* GRID UNTUK 2 KARTU */
+.match-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+    max-width: 1100px; 
+    margin: auto; 
+}
+.card { background: rgba(0,0,0,0.75); padding: 25px; border-radius: 15px; text-align: center; border: 1px solid rgba(255,215,0,0.1); backdrop-filter: blur(5px); }
+.teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.team img { width: 60px; height: 60px; object-fit: contain; border: 2px solid #ffd700; border-radius: 50%; background: #111; padding: 5px; }
+.vs { font-size: 22px; font-weight: 800; color: #ffd700; }
+.score { font-size: 35px; font-weight: 700; margin: 10px 0; }
+.card-btn { display: inline-block; margin-top: 15px; color: #000; background: #ffd700; text-decoration: none; padding: 10px 25px; border-radius: 8px; font-weight: bold; transition: 0.3s; }
+.card-btn:hover { background: #fff; transform: scale(1.05); }
 
-main { padding:20px; max-width: 1200px; margin: auto; }
-h2 { margin:25px 0 15px; font-size:22px; color: #ffd700; text-align: center; }
-.card { background:rgba(0,0,0,0.7); padding:25px; border-radius:15px; margin-bottom:20px; text-align:center; border: 1px solid rgba(255,215,0,0.1); backdrop-filter: blur(5px); }
-.teams { display:flex; align-items:center; justify-content:space-between; margin-bottom:15px; }
-.team img { width:65px; height:65px; object-fit:contain; border:2px solid #ffd700; border-radius: 50%; padding: 5px; background: #111; }
-.vs { font-size:22px; font-weight:800; color:#ffd700; }
-.score { font-size:35px; font-weight:700; color: #fff; }
-.card-btn { display:inline-block; margin-top:15px; color:#ffd700; text-decoration:none; font-weight:700; padding:10px 25px; border:1px solid #ffd700; border-radius:8px; }
-
-/* FLOATING & MENU */
-.floating { position:fixed; bottom:20px; right:20px; background:#ffd700; color:black; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; z-index: 999; }
-.burger span { display: block; height: 4px; width: 30px; background-color: #ffd700; margin: 5px 0; border-radius: 2px; }
-.dropdown-card { display: none; position: absolute; top: 50px; right: 0; background-color: #111; padding: 15px; border-radius: 10px; border: 1px solid #ffd700; flex-direction: column; gap:10px; min-width: 150px; }
-.dropdown-card a { color: #fff; text-decoration: none; padding: 8px; border-bottom: 1px solid #333; text-align: center; }
+/* FLOATING BUTTON */
+.floating { position: fixed; bottom: 20px; right: 20px; background: #ffd700; color: #000; padding: 14px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 100; box-shadow: 0 5px 20px rgba(255,215,0,0.3); }
