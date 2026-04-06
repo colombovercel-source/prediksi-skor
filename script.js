@@ -8,12 +8,12 @@ const transactions = [
 
 // DATA JADWAL DENGAN WIN PROBABILITY (H|D|A)
 const schedules = [
-    { time: "21:00", league: "Premier League", match: "Arsenal vs Liverpool", winProb: "45 | 15 | 40", hot: true },
-    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", winProb: "60 | 25 | 15", hot: false },
-    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", winProb: "35 | 30 | 35", hot: true },
-    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", winProb: "50 | 20 | 30", hot: true },
-    { time: "19:30", league: "Bundesliga", match: "Bayern vs Dortmund", winProb: "55 | 15 | 30", hot: false },
-    { time: "15:30", league: "BRI Liga 1", match: "Persib vs Persija", winProb: "42 | 20 | 38", hot: true }
+    { time: "21:00", league: "Premier League", match: "Arsenal vs Liverpool", winProb: "home 45 | draw 15 | away 40", hot: true },
+    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", winProb: "home 60 | draw 25 | away 15", hot: false },
+    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", winProb: "home 35 | draw 30 | away 35", hot: true },
+    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", winProb: "home 50 | draw 20 | away 30", hot: true },
+    { time: "19:30", league: "Bundesliga", match: "Bayern vs Dortmund", winProb: "home 55 | draw 15 | away 30", hot: false },
+    { time: "15:30", league: "BRI Liga 1", match: "Persib vs Persija", winProb: "home 42 |draw 20 | away 38", hot: true }
 ];
 
 // PREDIKSI MATCHES
