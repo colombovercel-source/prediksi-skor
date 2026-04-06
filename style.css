@@ -24,6 +24,50 @@ body::before {
   background:rgba(0,0,0,0.7);
   z-index:-1;
 }
+.menu-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.burger {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.dropdown a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.dropdown a:hover {
+  color: #ffd700;
+}
 
 /* HEADER */
 header {
