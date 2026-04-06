@@ -1,7 +1,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Barlow', sans-serif; color:white; overflow-x: hidden; }
 
-/* BACKGROUND TERBARU */
+/* BACKGROUND */
 body::before {
   content:""; position:fixed; inset:0;
   background:url('https://i.imgur.com/zGbaikU.jpeg') center/cover no-repeat;
@@ -10,25 +10,16 @@ body::before {
 }
 .bg-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:-1; }
 
-/* HEADER & LOGO */
+/* HEADER */
 header { display:flex; justify-content:space-between; align-items: center; padding:10px 30px; background:rgba(0,0,0,0.9); border-bottom: 1px solid #ffd700; }
 .logo img { height: 50px; width: auto; object-fit: contain; }
 
-/* TRANSACTION BAR */
-.transaction-bar { background: #000; border-bottom: 1px solid rgba(255, 215, 0, 0.3); height: 35px; overflow: hidden; display: flex; align-items: center; }
-.transaction-track { display: flex; white-space: nowrap; animation: scrollTrans 45s linear infinite; }
-.trans-item { padding: 0 40px; font-size: 12px; color: #ccc; }
-.trans-item b { color: #ffd700; }
-.status-wd { color: #ff4d4d; font-weight: bold; }
-.status-depo { color: #4dff4d; font-weight: bold; }
-@keyframes scrollTrans { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-/* RUNNING TEXT EVENT */
+/* RUNNING TEXT */
 .marquee-container { background: #b32e2e; height: 35px; display: flex; align-items: center; border-bottom: 2px solid #ffd700; }
 .marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; }
 .event-tag { background: #ffd700; color: #000; font-weight: 800; padding: 0 15px; height: 35px; line-height: 35px; font-family: 'Barlow Condensed'; }
 
-/* BANNER SLIDER */
+/* SLIDER */
 .banner-slider { width: 100%; position: relative; overflow: hidden; background: #000; border-bottom: 2px solid #ffd700; }
 .slider-wrapper { display: flex; transition: transform 0.8s ease-in-out; }
 .slide { min-width: 100%; }
@@ -36,27 +27,24 @@ header { display:flex; justify-content:space-between; align-items: center; paddi
 
 .prev-btn, .next-btn {
     position: absolute; top: 50%; transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6); color: white; border: none;
-    font-size: 24px; padding: 15px; cursor: pointer; z-index: 10; transition: 0.3s;
+    background: rgba(0, 0, 0, 0.6); color: white; border: none; font-size: 24px; padding: 15px; cursor: pointer; z-index: 10;
 }
 .next-btn { right: 0; border-radius: 5px 0 0 5px; }
 .prev-btn { left: 0; border-radius: 0 5px 5px 0; }
-.prev-btn:hover, .next-btn:hover { background: #ffd700; color: #000; }
 
 .dots-container { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
 .dot { width: 10px; height: 10px; background: rgba(255,255,255,0.4); border-radius: 50%; cursor: pointer; }
 .dot.active { background: #ffd700; width: 25px; border-radius: 10px; }
 
-/* SCHEDULE TABLE & WIN PROB */
+/* TABLE */
 .schedule-section { padding: 30px 20px; max-width: 1200px; margin: auto; }
 .section-title { font-weight: 800; color: #ffd700; margin-bottom: 15px; font-size: 18px; border-left: 4px solid #ffd700; padding-left: 15px; }
 .table-container { background: rgba(0,0,0,0.8); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,215,0,0.2); }
 .schedule-table { width: 100%; border-collapse: collapse; }
 .schedule-table th { background: rgba(255,215,0,0.15); color: #ffd700; padding: 15px; font-size: 13px; text-align: left; }
 .schedule-table td { padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; }
-.hot-tag { background: #ff4d4d; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-left: 8px; font-weight: bold; }
 
-/* HERO & CARDS */
+/* CARDS */
 .hero { text-align:center; padding:50px 20px; }
 .hero h1 { font-size:38px; }
 .hero em { color:#ffd700; font-style: normal; }
@@ -71,8 +59,8 @@ h2 { margin:25px 0 15px; font-size:22px; color: #ffd700; text-align: center; }
 .score { font-size:35px; font-weight:700; color: #fff; }
 .card-btn { display:inline-block; margin-top:15px; color:#ffd700; text-decoration:none; font-weight:700; padding:10px 25px; border:1px solid #ffd700; border-radius:8px; }
 
-/* FLOATING & BURGER */
-.floating { position:fixed; bottom:20px; right:20px; background:#ffd700; color:black; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; z-index: 999; box-shadow: 0 0 15px rgba(255,215,0,0.4); }
+/* FLOATING & MENU */
+.floating { position:fixed; bottom:20px; right:20px; background:#ffd700; color:black; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; z-index: 999; }
 .burger span { display: block; height: 4px; width: 30px; background-color: #ffd700; margin: 5px 0; border-radius: 2px; }
 .dropdown-card { display: none; position: absolute; top: 50px; right: 0; background-color: #111; padding: 15px; border-radius: 10px; border: 1px solid #ffd700; flex-direction: column; gap:10px; min-width: 150px; }
 .dropdown-card a { color: #fff; text-decoration: none; padding: 8px; border-bottom: 1px solid #333; text-align: center; }
