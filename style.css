@@ -42,11 +42,6 @@ header {
   color:#ffd700;
 }
 
-.header-btn {
-  color:#ffd700;
-  text-decoration:none;
-}
-
 /* HERO */
 .hero {
   text-align:center;
@@ -80,6 +75,7 @@ h2 {
   margin:20px 0 10px;
 }
 
+/* CARD */
 .card {
   background:rgba(255,255,255,0.08);
   padding:20px;
@@ -88,21 +84,44 @@ h2 {
   text-align:center;
 }
 
+/* TEAMS WITH LOGO */
 .teams {
-  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
 }
 
+.team {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.team img {
+  width:30px;
+  height:30px;
+  object-fit:contain;
+}
+
+.vs {
+  font-size:12px;
+  opacity:0.6;
+}
+
+/* SCORE */
 .score {
   font-size:30px;
   margin:10px 0;
 }
 
+/* TIME */
 .time {
   font-size:14px;
   opacity:0.7;
 }
 
-/* CARD BUTTON */
+/* BUTTON */
 .card-btn {
   display:inline-block;
   margin-top:10px;
