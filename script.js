@@ -1,92 +1,90 @@
-// DATA JADWAL 6 LIGA DENGAN WIN PROBABILITY (H | D | A)
+// DATA JADWAL (Format: Home 45% | Draw 15% | Away 40%)
 const schedules = [
-    { time: "21:00", league: "Premier League", match: "Arsenal vs Liverpool", winProb: "45 | 15 | 40", hot: true },
-    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", winProb: "60 | 25 | 15", hot: false },
-    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", winProb: "35 | 30 | 35", hot: true },
-    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", winProb: "50 | 20 | 30", hot: true },
-    { time: "19:30", league: "Bundesliga", match: "Bayern vs Dortmund", winProb: "55 | 15 | 30", hot: false },
-    { time: "15:30", league: "BRI Liga 1", match: "Persib vs Persija", winProb: "42 | 20 | 38", hot: true }
+    { time: "21:00", league: "EPL", match: "Arsenal vs Liverpool", prob: "Home 45% | Draw 15% | Away 40%" },
+    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", prob: "Home 45% | Draw 15% | Away 40%" },
+    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", prob: "Home 45% | Draw 15% | Away 40%" },
+    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", prob: "Home 45% | Draw 15% | Away 40%" }
 ];
 
-// DATA MATCH PREDIKSI UTAMA (2 KARTU)
-const matchData = [
-  { 
-    league: "Big Matches Today", 
-    matches: [
-      { home:"Arsenal", homeLogo:"https://i.imgur.com/e4HFaAA.png", away:"Chelsea", awayLogo:"https://i.imgur.com/rRKLxQd.png", score:"2-1", time:"20:00" },
-      { home:"Liverpool", homeLogo:"https://i.imgur.com/kufe8Br.png", away:"Man City", awayLogo:"https://i.imgur.com/X7oPQOJ.png", score:"1-1", time:"22:00" }
-    ]
-  }
+// DATA HASIL (MENAMPILKAN 2 KARTU)
+const matchResults = [
+    { 
+        home: "Arsenal", homeLogo: "https://i.imgur.com/e4HFaAA.png", 
+        away: "Chelsea", awayLogo: "https://i.imgur.com/rRKLxQd.png", 
+        score: "2-1", status: "Full Time" 
+    },
+    { 
+        home: "Liverpool", homeLogo: "https://i.imgur.com/kufe8Br.png", 
+        away: "Man City", awayLogo: "https://i.imgur.com/X7oPQOJ.png", 
+        score: "1-1", status: "Full Time" 
+    }
 ];
 
-function renderAll() {
-    // Render Jadwal Probabilitas
-    const schedBody = document.getElementById('scheduleBody');
-    schedBody.innerHTML = schedules.map(s => `
+function renderPage() {
+    // Render Tabel
+    const tableBody = document.getElementById('scheduleBody');
+    tableBody.innerHTML = schedules.map(s => `
         <tr>
             <td>${s.time} WIB</td>
-            <td><b style="color:#ffd700">${s.league}</b></td>
-            <td>${s.match} ${s.hot ? '<span class="hot-tag">HOT</span>' : ''}</td>
-            <td style="font-family:'Barlow Condensed'; font-weight:800; color:#ffd700; letter-spacing:1px;">${s.winProb}</td>
+            <td style="color:#ffd700; font-weight:bold;">${s.league}</td>
+            <td>${s.match}</td>
+            <td style="font-family:'Barlow Condensed'; font-weight:800; color:#ffd700; letter-spacing:1px;">${s.prob}</td>
         </tr>
     `).join('');
 
-    // Render Prediksi Matches (Menampilkan 2 kartu sekaligus)
-    let matchHtml = "";
-    matchData.forEach(l => {
-        matchHtml += `<h2>${l.league}</h2>`;
-        l.matches.forEach(m => {
-            matchHtml += `
-            <div class="card">
-                <div class="teams">
-                    <div class="team"><img src="${m.homeLogo}"><span>${m.home}</span></div>
-                    <div class="vs">VS</div>
-                    <div class="team"><img src="${m.awayLogo}"><span>${m.away}</span></div>
-                </div>
-                <div class="score">${m.score}</div>
-                <div class="time">${m.time} WIB</div>
-                <a href="https://rinjaniman.com/sportsbook" target="_blank" class="card-btn">Main Sekarang</a>
-            </div>`;
-        });
-    });
-    document.getElementById("matches").innerHTML = matchHtml;
+    // Render 2 Kartu Pertandingan
+    const matchContainer = document.getElementById('matches');
+    matchContainer.innerHTML = matchResults.map(m => `
+        <div class="card">
+            <div class="teams">
+                <div class="team"><img src="${m.homeLogo}"><p>${m.home}</p></div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="${m.awayLogo}"><p>${m.away}</p></div>
+            </div>
+            <div class="score">${m.score}</div>
+            <div style="font-size:12px; color:#aaa; margin-bottom:10px;">${m.status}</div>
+            <a href="https://rinjaniman.com" target="_blank" class="card-btn">PASANG SEKARANG</a>
+        </div>
+    `).join('');
 }
 
-renderAll();
-
-// BANNER SLIDER LOGIC (AUTO 3 DETIK)
-let slideIndex = 0;
+// LOGIK SLIDER (AUTO 3 DETIK)
+let currentSlide = 0;
 const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
 const dotsContainer = document.getElementById('dotsContainer');
 
+// Buat Dots
 slides.forEach((_, i) => {
     const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => { showSlide(i); resetTimer(); });
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
     dotsContainer.appendChild(dot);
 });
 
-const dots = document.querySelectorAll('.dot');
-function showSlide(index) {
-    slideIndex = index;
-    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-    dots.forEach(d => d.classList.remove('active'));
-    dots[slideIndex].classList.add('active');
+function goToSlide(n) {
+    currentSlide = n;
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => {
+        d.className = 'dot' + (i === currentSlide ? ' active' : '');
+    });
 }
 
-document.getElementById('nextBtn').addEventListener('click', () => { slideIndex = (slideIndex + 1) % slides.length; showSlide(slideIndex); resetTimer(); });
-document.getElementById('prevBtn').addEventListener('click', () => { slideIndex = (slideIndex - 1 + slides.length) % slides.length; showSlide(slideIndex); resetTimer(); });
-
-// Auto-Slide 3000ms (3 detik)
-let timer = setInterval(() => { slideIndex = (slideIndex + 1) % slides.length; showSlide(slideIndex); }, 3000);
-function resetTimer() { clearInterval(timer); timer = setInterval(() => { slideIndex = (slideIndex + 1) % slides.length; showSlide(slideIndex); }, 3000); }
-
-// BURGER MENU LOGIC
-const burger = document.getElementById("burger");
-const dropdownCard = document.getElementById("dropdownCard");
-burger.addEventListener("click", () => {
-  dropdownCard.style.display = dropdownCard.style.display === "flex" ? "none" : "flex";
-  dropdownCard.style.flexDirection = "column";
+document.getElementById('nextBtn').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    goToSlide(currentSlide);
 });
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    goToSlide(currentSlide);
+});
+
+// Auto Slide
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    goToSlide(currentSlide);
+}, 3000);
+
+// Jalankan Fungsi Saat Halaman Dimuat
+renderPage();
