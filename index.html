@@ -14,7 +14,7 @@
 <div class="bg-overlay"></div>
 
 <header>
-  <div class="logo"> RINJANI<span>4D</span></div>
+  <div class="logo">⚽ RINJANI<span>4D</span></div>
   <a href="https://rinjaniman.com" target="_blank" class="header-btn">Login</a>
 </header>
 
@@ -32,7 +32,7 @@
 <main id="matches"></main>
 
 <a href="https://rinjaniman.com" target="_blank" class="floating">
-   MAIN SEKARANG
+  🚀 MAIN SEKARANG
 </a>
 
 <script>
@@ -40,8 +40,22 @@ const data = [
   {
     league: "Premier League",
     matches: [
-      {home:"Arsenal", away:"Chelsea", score:"2-1", time:"20:00"},
-      {home:"Liverpool", away:"City", score:"1-1", time:"22:00"}
+      {
+        home:"Arsenal",
+        homeLogo:"https://i.imgur.com/e4HFaAA.png",
+        away:"Chelsea",
+        awayLogo:"https://i.imgur.com/rRKLxQd.png",
+        score:"2-1",
+        time:"20:00"
+      },
+      {
+        home:"Liverpool",
+        homeLogo:"https://i.imgur.com/kufe8Br.png",
+        away:"Manchester City",
+        awayLogo:"https://i.imgur.com/X7oPQOJ.png",
+        score:"1-1",
+        time:"22:00"
+      }
     ]
   }
 ];
@@ -55,13 +69,28 @@ function render(){
     l.matches.forEach(m => {
       html += `
       <div class="card">
-        <div class="teams">${m.home} vs ${m.away}</div>
+
+        <div class="teams">
+          <div class="team">
+            <img src="${m.homeLogo}" alt="${m.home}">
+            <span>${m.home}</span>
+          </div>
+
+          <div class="vs">VS</div>
+
+          <div class="team">
+            <img src="${m.awayLogo}" alt="${m.away}">
+            <span>${m.away}</span>
+          </div>
+        </div>
+
         <div class="score">${m.score}</div>
         <div class="time">${m.time} WIB</div>
 
         <a href="https://rinjaniman.com" target="_blank" class="card-btn">
           Main Sekarang
         </a>
+
       </div>`;
     });
   });
