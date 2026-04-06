@@ -1,25 +1,10 @@
-// --- KODE ASLI MATCH & BURGER TETAP DI SINI ---
-
+// --- LOGIKA ASLI (MATCH & BURGER) ---
 const data = [
   {
     league: "Premier League",
     matches: [
-      {
-        home:"Arsenal",
-        homeLogo:"https://i.imgur.com/e4HFaAA.png",
-        away:"Chelsea",
-        awayLogo:"https://i.imgur.com/rRKLxQd.png",
-        score:"2-1",
-        time:"20:00"
-      },
-      {
-        home:"Liverpool",
-        homeLogo:"https://i.imgur.com/kufe8Br.png",
-        away:"Manchester City",
-        awayLogo:"https://i.imgur.com/X7oPQOJ.png",
-        score:"1-1",
-        time:"22:00"
-      }
+      { home:"Arsenal", homeLogo:"https://i.imgur.com/e4HFaAA.png", away:"Chelsea", awayLogo:"https://i.imgur.com/rRKLxQd.png", score:"2-1", time:"20:00" },
+      { home:"Liverpool", homeLogo:"https://i.imgur.com/kufe8Br.png", away:"Manchester City", awayLogo:"https://i.imgur.com/X7oPQOJ.png", score:"1-1", time:"22:00" }
     ]
   }
 ];
@@ -32,21 +17,13 @@ function render(){
       html += `
       <div class="card">
         <div class="teams">
-          <div class="team">
-            <img src="${m.homeLogo}" alt="${m.home}">
-            <span>${m.home}</span>
-          </div>
+          <div class="team"><img src="${m.homeLogo}"><span>${m.home}</span></div>
           <div class="vs">VS</div>
-          <div class="team">
-            <img src="${m.awayLogo}" alt="${m.away}">
-            <span>${m.away}</span>
-          </div>
+          <div class="team"><img src="${m.awayLogo}"><span>${m.away}</span></div>
         </div>
         <div class="score">${m.score}</div>
         <div class="time">${m.time} WIB</div>
-        <a href="https://rinjaniman.com/sportsbook" target="_blank" class="card-btn">
-          Main Sekarang
-        </a>
+        <a href="https://rinjaniman.com/sportsbook" target="_blank" class="card-btn">Main Sekarang</a>
       </div>`;
     });
   });
@@ -57,43 +34,45 @@ render();
 const burger = document.getElementById("burger");
 const dropdownCard = document.getElementById("dropdownCard");
 burger.addEventListener("click", () => {
-  if(dropdownCard.style.display === "flex"){
-    dropdownCard.style.display = "none";
-  } else {
-    dropdownCard.style.display = "flex";
-    dropdownCard.style.flexDirection = "column";
-  }
+  dropdownCard.style.display = dropdownCard.style.display === "flex" ? "none" : "flex";
+  dropdownCard.style.flexDirection = "column";
 });
 
-// --- FITUR BARU: LOGIKA BANNER SLIDER ---
-
-let currentSlide = 0;
-const sliderElement = document.getElementById('slider');
+// --- LOGIKA BANNER SLIDER OTOMATIS ---
+let slideIndex = 0;
+const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
 const dotsContainer = document.getElementById('dotsContainer');
 
-// Buat Titik Indikator otomatis sesuai jumlah gambar
+// Buat dots sesuai jumlah slide
 slides.forEach((_, i) => {
     const dot = document.createElement('div');
     dot.classList.add('dot');
     if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => moveSlide(i));
+    dot.addEventListener('click', () => showSlide(i));
     dotsContainer.appendChild(dot);
 });
 
 const dots = document.querySelectorAll('.dot');
 
-function moveSlide(index) {
-    currentSlide = index;
-    sliderElement.style.transform = `translateX(-${currentSlide * 100}%)`;
-    
-    // Update warna dot
+function showSlide(index) {
+    slideIndex = index;
+    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
     dots.forEach(d => d.classList.remove('active'));
-    dots[currentSlide].classList.add('active');
+    dots[slideIndex].classList.add('active');
 }
 
-// Jalankan otomatis setiap 4 detik
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    moveSlide(currentSlide);
-}, 4000);
+// Fungsi Geser Otomatis
+function autoSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+}
+
+// Jalankan otomatis setiap 5 detik
+let timer = setInterval(autoSlide, 5000);
+
+// Berhenti jika user klik manual, lalu jalan lagi
+function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(autoSlide, 5000);
+}
