@@ -1,100 +1,111 @@
-/* --- CSS ASLI TETAP SAMA --- */
+/* --- CSS DASAR --- */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Barlow', sans-serif; color:white; }
-body::before {
-  content:""; position:fixed; inset:0;
-  background:url('https://i.imgur.com/Vc5jWLF.png') center/cover no-repeat;
-  z-index:-2;
-}
+body { font-family: 'Barlow', sans-serif; color:white; overflow-x: hidden; }
+body::before { content:""; position:fixed; inset:0; background:url('https://i.imgur.com/Vc5jWLF.png') center/cover no-repeat; z-index:-2; }
 .bg-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:-1; }
 
-header { display:flex; justify-content:space-between; padding:15px 30px; background:rgba(0,0,0,0.8); }
+header { display:flex; justify-content:space-between; padding:15px 30px; background:rgba(0,0,0,0.8); border-bottom: 1px solid rgba(255,215,0,0.2); }
 .logo { font-weight:800; font-size:30px; }
 .logo span { color:#ffd700; }
 
-/* --- TAMBAHAN CSS BANNER SLIDER --- */
-.banner {
-    position: relative;
-    width: 100%;
-    max-width: 1200px; /* Ukuran maksimal banner */
-    margin: 20px auto 0;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border: 2px solid rgba(255, 215, 0, 0.3);
-}
-
-.slider {
+/* --- CSS RUNNING TEXT (MARQUEE) --- */
+.marquee-container {
+    background: #b32e2e; /* Warna merah sesuai gambar */
+    height: 35px;
     display: flex;
-    transition: transform 0.6s ease-in-out;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2px solid #ffd700;
+}
+.marquee-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.marquee-content .icon {
+    padding: 0 10px;
+    font-size: 18px;
+}
+.marquee-content marquee {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+.event-tag {
+    background: linear-gradient(to right, #ffd700, #ffae00);
+    color: #000;
+    font-weight: 800;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
+/* --- CSS BANNER SLIDER (FULL WIDTH) --- */
+.banner-slider {
+    width: 100%; /* Mengambil lebar penuh layar */
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
 .slide {
     min-width: 100%;
 }
-
 .slide img {
     width: 100%;
-    height: 350px; /* Tinggi banner di Desktop */
+    height: auto;
+    aspect-ratio: 21 / 9; /* Menjaga rasio agar tidak penyok */
     object-fit: cover;
     display: block;
 }
-
 .dots-container {
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 8px;
 }
-
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: rgba(255,255,255,0.4);
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s;
 }
-
 .dot.active {
     background: #ffd700;
-    transform: scale(1.3);
+    width: 25px; /* Efek memanjang saat aktif */
+    border-radius: 10px;
 }
 
-/* Responsive Mobile */
-@media (max-width: 768px) {
-    .banner { width: 90%; }
-    .slide img { height: 200px; } /* Tinggi banner di HP lebih pendek */
-}
-
-/* --- LANJUTAN CSS ASLI (Hero, Card, dll) --- */
-.menu-container { position: absolute; top: 20px; right: 20px; z-index: 1000; }
-.burger { width: 35px; height: 28px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
-.burger span { display: block; height: 4px; background-color: #fff; border-radius: 2px; }
-.dropdown-card { display: none; position: absolute; top: 40px; right: 0; background-color: rgba(20,20,20,0.95); padding: 15px 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); flex-direction: column; min-width: 160px; gap:10px; animation: fadeIn 0.3s ease forwards; }
-.dropdown-card a { color:#ffd700; text-decoration:none; font-weight:600; padding:10px; border-radius:8px; background:rgba(255,215,0,0.1); }
-.dropdown-card a:hover { background:#ffd700; color:black; }
-
-.hero { text-align:center; padding:40px 20px; }
+/* --- KELANJUTAN DESAIN ASLI --- */
+.hero { text-align:center; padding:60px 20px; }
 .hero h1 { font-size:40px; }
 .hero em { color:#ffd700; }
 .btn-primary { display:inline-block; margin-top:20px; padding:12px 24px; background:#ffd700; color:black; text-decoration:none; border-radius:8px; font-weight: bold; }
 
 main { padding:20px; }
-h2 { margin:20px 0 10px; font-size:22px; color: #ffd700; border-left: 4px solid #ffd700; padding-left: 10px;}
-.card { background:rgba(255,255,255,0.08); padding:25px; border-radius:12px; margin-bottom:20px; text-align:center; transition: 0.2s; border: 1px solid rgba(255,255,255,0.05); }
-.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.12);}
+h2 { margin:20px 0 10px; font-size:22px; color: #ffd700; }
+.card { background:rgba(255,255,255,0.08); padding:25px; border-radius:12px; margin-bottom:20px; text-align:center; border: 1px solid rgba(255,255,255,0.05); }
 .teams { display:flex; align-items:center; justify-content:space-between; margin-bottom:15px; }
 .team { display:flex; flex-direction: column; align-items:center; gap:8px; width: 40%;}
-.team img { width:60px; height:60px; object-fit:contain; border-radius:50%; border:2px solid #ffd700; background:rgba(0,0,0,0.3); padding:4px; }
-.team span { font-size:14px; font-weight:600; }
+.team img { width:60px; height:60px; object-fit:contain; border:2px solid #ffd700; border-radius: 50%; padding: 5px; background: #000;}
 .vs { font-size:20px; font-weight:800; color:#ffd700; }
-.score { font-size:32px; margin:10px 0; font-weight:700; letter-spacing: 2px;}
-.time { font-size:14px; opacity:0.7; margin-bottom:10px; }
+.score { font-size:32px; font-weight:700; }
+.time { font-size:14px; opacity:0.7; }
 .card-btn { display:inline-block; margin-top:10px; color:#ffd700; text-decoration:none; font-weight:600; padding:8px 18px; border:1px solid #ffd700; border-radius:8px; }
-.card-btn:hover { background:#ffd700; color:black; }
-.floating { position:fixed; bottom:20px; right:20px; background:#ffd700; color:black; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.3); z-index: 999;}
 
+.menu-container { position: absolute; top: 20px; right: 20px; z-index: 1000; }
+.burger { width: 35px; height: 28px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
+.burger span { display: block; height: 4px; background-color: #fff; border-radius: 2px; }
+.dropdown-card { display: none; position: absolute; top: 40px; right: 0; background-color: rgba(20,20,20,0.95); padding: 15px 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); flex-direction: column; min-width: 160px; gap:10px; animation: fadeIn 0.3s ease forwards; }
+.dropdown-card a { color:#ffd700; text-decoration:none; font-weight:600; padding:10px; border-radius:8px; background:rgba(255,215,0,0.1); }
+.floating { position:fixed; bottom:20px; right:20px; background:#ffd700; color:black; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.3); z-index: 999;}
 @keyframes fadeIn { from {opacity:0; transform: translateY(-10px);} to {opacity:1; transform: translateY(0);} }
