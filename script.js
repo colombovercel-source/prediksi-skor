@@ -1,24 +1,22 @@
 // DATA TRANSAKSI
 const transactions = [
-    { user: "Andi***", type: "DEPOSIT", amount: "100.000", time: "Baru saja" },
-    { user: "Wati***", type: "WITHDRAW", amount: "1.500.000", time: "2 mnt lalu" },
-    { user: "Dedi***", type: "DEPOSIT", amount: "50.000", time: "5 mnt lalu" },
-    { user: "Sury***", type: "WITHDRAW", amount: "750.000", time: "8 mnt lalu" },
-    { user: "Rian***", type: "DEPOSIT", amount: "250.000", time: "10 mnt lalu" }
+    { user: "Wawa***", type: "WITHDRAW", amount: "2.100.000", time: "Baru saja" },
+    { user: "Boby***", type: "DEPOSIT", amount: "50.000", time: "1 mnt lalu" },
+    { user: "Sury***", type: "WITHDRAW", amount: "800.000", time: "4 mnt lalu" },
+    { user: "Anan***", type: "DEPOSIT", amount: "200.000", time: "7 mnt lalu" }
 ];
 
-// DATA JADWAL 6 LIGA TOP
+// DATA JADWAL DENGAN WIN PROBABILITY (H|D|A)
 const schedules = [
-    { time: "21:00", league: "Premier League", match: "Arsenal vs Liverpool", channel: "Vidio", live: false },
-    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", channel: "Bein 3", live: false },
-    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", channel: "Bein 1", live: true },
-    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", channel: "SCTV", live: true },
-    { time: "19:30", league: "Bundesliga", match: "Bayern Munchen vs Dortmund", channel: "Mola", live: false },
-    { time: "20:00", league: "Ligue 1", match: "PSG vs Marseille", channel: "Bein 2", live: false },
-    { time: "15:30", league: "BRI Liga 1", match: "Persib vs Persija", channel: "Indosiar", live: false }
+    { time: "21:00", league: "Premier League", match: "Arsenal vs Liverpool", winProb: "45 | 15 | 40", hot: true },
+    { time: "23:30", league: "La Liga", match: "Real Madrid vs Girona", winProb: "60 | 25 | 15", hot: false },
+    { time: "01:45", league: "Serie A", match: "Inter Milan vs Juventus", winProb: "35 | 30 | 35", hot: true },
+    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", winProb: "50 | 20 | 30", hot: true },
+    { time: "19:30", league: "Bundesliga", match: "Bayern vs Dortmund", winProb: "55 | 15 | 30", hot: false },
+    { time: "15:30", league: "BRI Liga 1", match: "Persib vs Persija", winProb: "42 | 20 | 38", hot: true }
 ];
 
-// DATA MATCH PREDIKSI
+// PREDIKSI MATCHES
 const matchData = [
   { league: "Premier League", matches: [
       { home:"Arsenal", homeLogo:"https://i.imgur.com/e4HFaAA.png", away:"Chelsea", awayLogo:"https://i.imgur.com/rRKLxQd.png", score:"2-1", time:"20:00" }
@@ -26,6 +24,7 @@ const matchData = [
 ];
 
 function renderAll() {
+    // Transaksi
     const track = document.getElementById('transTrack');
     track.innerHTML = [...transactions, ...transactions].map(t => `
         <div class="trans-item">
@@ -35,16 +34,18 @@ function renderAll() {
         </div>
     `).join('');
 
+    // Jadwal Probabilitas
     const schedBody = document.getElementById('scheduleBody');
     schedBody.innerHTML = schedules.map(s => `
         <tr>
             <td>${s.time} WIB</td>
             <td><b style="color:#ffd700">${s.league}</b></td>
-            <td>${s.match}</td>
-            <td>${s.live ? '<span class="live-tag">LIVE</span>' : s.channel}</td>
+            <td>${s.match} ${s.hot ? '<span class="hot-tag">HOT</span>' : ''}</td>
+            <td style="font-family:'Barlow Condensed'; font-weight:800; color:#ffd700; letter-spacing:1px;">${s.winProb}</td>
         </tr>
     `).join('');
 
+    // Matches
     let matchHtml = "";
     matchData.forEach(l => {
         matchHtml += `<h2>${l.league}</h2>`;
@@ -67,7 +68,7 @@ function renderAll() {
 
 renderAll();
 
-// BANNER LOGIC (3 DETIK)
+// SLIDER LOGIC
 let slideIndex = 0;
 const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
