@@ -1,4 +1,4 @@
-// DATA MATCH (TETAP SAMA)
+// DATA PERTANDINGAN
 const data = [
   {
     league: "Premier League",
@@ -31,7 +31,7 @@ function render(){
 }
 render();
 
-// BURGER MENU
+// BURGER MENU LOGIC
 const burger = document.getElementById("burger");
 const dropdownCard = document.getElementById("dropdownCard");
 burger.addEventListener("click", () => {
@@ -39,13 +39,13 @@ burger.addEventListener("click", () => {
   dropdownCard.style.flexDirection = "column";
 });
 
-// LOGIKA BANNER SLIDER
+// BANNER SLIDER LOGIC
 let slideIndex = 0;
 const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
 const dotsContainer = document.getElementById('dotsContainer');
 
-// Buat Dots
+// Buat Dot Indikator
 slides.forEach((_, i) => {
     const dot = document.createElement('div');
     dot.classList.add('dot');
@@ -63,7 +63,7 @@ function showSlide(index) {
     dots[slideIndex].classList.add('active');
 }
 
-// Navigasi Panah
+// Navigasi Manual Panah
 document.getElementById('nextBtn').addEventListener('click', () => {
     slideIndex = (slideIndex + 1) % slides.length;
     showSlide(slideIndex);
