@@ -34,41 +34,58 @@ body::before {
 }
 
 .burger {
-  width: 30px;
-  height: 25px;
+  width: 35px;
+  height: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .burger span {
   display: block;
-  height: 3px;
+  height: 4px;
   background-color: #fff;
   border-radius: 2px;
+  transition: 0.3s;
 }
 
-.dropdown {
+/* Card modern */
+.dropdown-card {
   display: none;
   position: absolute;
-  top: 35px;
+  top: 40px;
   right: 0;
-  background-color: #222;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: rgba(20,20,20,0.95);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
   flex-direction: column;
-  min-width: 120px;
+  min-width: 160px;
+  gap:10px;
+  animation: fadeIn 0.3s ease forwards;
 }
 
-.dropdown a {
-  color: #fff;
-  text-decoration: none;
-  margin: 5px 0;
+.dropdown-card a {
+  color:#ffd700;
+  text-decoration:none;
+  font-weight:600;
+  padding:10px;
+  border-radius:8px;
+  background:rgba(255,215,0,0.1);
+  transition: 0.2s ease;
 }
 
-.dropdown a:hover {
-  color: #ffd700;
+.dropdown-card a:hover {
+  background:#ffd700;
+  color:black;
+}
+
+/* fadeIn animation */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(-10px);}
+  to {opacity:1; transform: translateY(0);}
 }
 
 /* HEADER */
@@ -122,21 +139,22 @@ h2 {
   font-size:22px;
 }
 
-/* CARD */
+/* CARD MATCH */
 .card {
   background:rgba(255,255,255,0.08);
   padding:25px;
   border-radius:12px;
   margin-bottom:20px;
   text-align:center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* TEAMS WITH LOGO */
+/* TEAMS */
 .teams {
   display:flex;
   align-items:center;
@@ -187,7 +205,7 @@ h2 {
   margin-bottom:10px;
 }
 
-/* BUTTON */
+/* CARD BUTTON */
 .card-btn {
   display:inline-block;
   margin-top:10px;
