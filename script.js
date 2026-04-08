@@ -1,75 +1,99 @@
-// FITUR BURGER MENU (PERBAIKAN)
+// --- DATA JADWAL & HASIL ---
+const schedules = [
+    { time: "21:00", league: "EPL", match: "Arsenal vs Liverpool", prob: "H 45% | D 15% | A 40%" },
+    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", prob: "H 50% | D 20% | A 30%" },
+    { time: "15:30", league: "LIGA 1", match: "Persib vs Persija", prob: "H 42% | D 20% | A 38%" },
+    { time: "23:00", league: "EPL", match: "Chelsea vs Spurs", prob: "H 35% | D 25% | A 40%" }
+];
+
+const matchResults = [
+    { home: "Arsenal", homeLogo: "https://i.imgur.com/e4HFaAA.png", away: "Chelsea", awayLogo: "https://i.imgur.com/rRKLxQd.png", score: "2-1" },
+    { home: "Liverpool", homeLogo: "https://i.imgur.com/kufe8Br.png", away: "Man City", awayLogo: "https://i.imgur.com/X7oPQOJ.png", score: "1-1" }
+];
+
+// --- FUNGSI BURGER MENU ---
 const burger = document.getElementById('burger');
 const dropdownCard = document.getElementById('dropdownCard');
 
 burger.addEventListener('click', (e) => {
     dropdownCard.classList.toggle('active');
-    e.stopPropagation(); // Mencegah benturan klik
+    e.stopPropagation();
 });
 
-// Menutup menu jika klik di luar area menu
-window.addEventListener('click', () => {
-    if (dropdownCard.classList.contains('active')) {
-        dropdownCard.classList.remove('active');
-    }
-});
+document.addEventListener('click', () => dropdownCard.classList.remove('active'));
 
-// DATA JADWAL & MATCH (Tetap Sama)
-const schedules = [
-    { time: "21:00", league: "EPL", match: "Arsenal vs Liverpool", prob: "Home 45% | Draw 15% | Away 40%" },
-    { time: "02:00", league: "UCL", match: "Man City vs Real Madrid", prob: "Home 45% | Draw 15% | Away 40%" }
-];
+// --- FUNGSI FILTER LIGA ---
+function filterLeague(league) {
+    const btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(btn => {
+        btn.classList.remove('active');
+        if(btn.textContent === league || (league === 'ALL' && btn.textContent === 'SEMUA')) btn.classList.add('active');
+    });
 
-const matchResults = [
-    { home: "Arsenal", homeLogo: "https://i.imgur.com/e4HFaAA.png", away: "Chelsea", awayLogo: "https://i.imgur.com/rRKLxQd.png", score: "1-3", status: "Full Time" },
-    { home: "Liverpool", homeLogo: "https://i.imgur.com/kufe8Br.png", away: "Man City", awayLogo: "https://i.imgur.com/X7oPQOJ.png", score: "2-4", status: "Full Time" }
-];
-
-function renderPage() {
-    const tableBody = document.getElementById('scheduleBody');
-    if(tableBody) {
-        tableBody.innerHTML = schedules.map(s => `
-            <tr>
-                <td>${s.time} WIB</td>
-                <td style="color:#ffd700; font-weight:bold;">${s.league}</td>
-                <td>${s.match}</td>
-                <td style="font-family:'Barlow Condensed'; font-weight:800; color:#ffd700;">${s.prob}</td>
-            </tr>
-        `).join('');
-    }
-
-    const matchContainer = document.getElementById('matches');
-    if(matchContainer) {
-        matchContainer.innerHTML = matchResults.map(m => `
-            <div class="card">
-                <div class="teams">
-                    <div class="team"><img src="${m.homeLogo}"><p>${m.home}</p></div>
-                    <div class="vs">VS</div>
-                    <div class="team"><img src="${m.awayLogo}"><p>${m.away}</p></div>
-                </div>
-                <div class="score">${m.score}</div>
-                <div style="font-size:12px; color:#aaa;">${m.status}</div>
-                <a href="https://rinjaniman.com" class="card-btn">PASANG SEKARANG</a>
-            </div>
-        `).join('');
-    }
+    const filtered = league === 'ALL' ? schedules : schedules.filter(s => s.league === league);
+    renderTable(filtered);
 }
 
-// LOGIKA SLIDER (Auto 3 Detik)
-let currentSlide = 0;
+function renderTable(data) {
+    const body = document.getElementById('scheduleBody');
+    body.innerHTML = data.map(s => `
+        <tr>
+            <td>${s.time} WIB</td>
+            <td style="color:#ffd700; font-weight:bold;">${s.league}</td>
+            <td>${s.match}</td>
+            <td style="font-family:'Barlow Condensed'; font-weight:800; color:#ffd700;">${s.prob}</td>
+        </tr>
+    `).join('');
+}
+
+// --- FUNGSI SALIN PREDIKSI ---
+function copyMatch(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Prediksi Berhasil Disalin!");
+    });
+}
+
+function renderCards() {
+    const container = document.getElementById('matches');
+    container.innerHTML = matchResults.map(m => `
+        <div class="card">
+            <div class="teams">
+                <div class="team"><img src="${m.homeLogo}"><p>${m.home}</p></div>
+                <div class="vs">VS</div>
+                <div class="team"><img src="${m.awayLogo}"><p>${m.away}</p></div>
+            </div>
+            <div class="score">${m.score}</div>
+            <button class="copy-btn" onclick="copyMatch('Prediksi ${m.home} vs ${m.away}: Skor ${m.score} - Analisa by RINJANI4D')">
+                📋 Salin Prediksi
+            </button>
+            <a href="https://rinjaniman.com" class="card-btn">PASANG SEKARANG</a>
+        </div>
+    `).join('');
+}
+
+// --- SLIDER LOGIC ---
+let idx = 0;
 const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('dotsContainer');
 
-function goToSlide(n) {
-    currentSlide = n;
-    if(slider) {
-        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
+slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => move(i));
+    dotsContainer.appendChild(d);
+});
+
+function move(n) {
+    idx = n;
+    slider.style.transform = `translateX(-${idx * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.className = 'dot' + (i === idx ? ' active' : ''));
 }
 
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    goToSlide(currentSlide);
-}, 3000);
+document.getElementById('nextBtn').onclick = () => move((idx + 1) % slides.length);
+document.getElementById('prevBtn').onclick = () => move((idx - 1 + slides.length) % slides.length);
+setInterval(() => move((idx + 1) % slides.length), 3000);
 
-renderPage();
+// Inisialisasi
+filterLeague('ALL');
+renderCards();
