@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RINJANI4D — Prediksi Skor Akurat</title>
+    <title>RINJANI4D — Analisa & Prediksi Bola</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,17 +20,16 @@
       <span></span><span></span><span></span>
     </div>
     <div class="dropdown-card" id="dropdownCard">
-      <a href="https://rinjaniman.com" target="_blank">Login</a>
-      <a href="https://rinjaniman.com/register" target="_blank">Daftar</a>
-      <a href="https://rinjani-game-world--colombogelap.replit.app" target="_blank">Profil</a>
+      <a href="https://rinjaniman.com">Login</a>
+      <a href="https://rinjaniman.com/register">Daftar</a>
+      <a href="https://rinjani-game-world--colombogelap.replit.app">Profil</a>
     </div>
   </div>
 </header>
 
 <div class="marquee-container">
     <div class="marquee-content">
-        <marquee scrollamount="5">🔊 RINJANI4D menampilkan pilihan menarik untuk semua kalangan. Dapatkan tantangan baru dan keseruan setiap harinya hanya di platform kami!
-!</marquee>
+        <marquee scrollamount="5">📢 RINJANI4D: Prediksi Terakurat Hari Ini! Update Jadwal Liga Inggris, UCL, dan Liga 1 Secara Real-Time.</marquee>
     </div>
 </div>
 
@@ -49,6 +48,14 @@
 
 <section class="schedule-section">
     <div class="section-title">📊 ANALISA PELUANG (H | D | A)</div>
+    
+    <div class="tab-filter" id="tabFilter">
+        <button class="tab-btn active" onclick="filterLeague('ALL')">SEMUA</button>
+        <button class="tab-btn" onclick="filterLeague('EPL')">EPL</button>
+        <button class="tab-btn" onclick="filterLeague('UCL')">UCL</button>
+        <button class="tab-btn" onclick="filterLeague('LIGA 1')">LIGA 1</button>
+    </div>
+
     <div class="table-container">
         <table>
             <thead>
