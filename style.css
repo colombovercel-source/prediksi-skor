@@ -1,4 +1,9 @@
-/* --- RESET & DASAR --- */
+/* ========================================
+   CORE STYLE - RINJANI4D (FINAL VERSION)
+   ========================================
+*/
+
+/* 1. RESET & DASAR */
 * { 
     margin: 0; 
     padding: 0; 
@@ -10,11 +15,10 @@ body {
     color: white; 
     overflow-x: hidden; 
     min-height: 100vh;
-    /* Pastikan tidak ada warna solid di body */
-    background: none; 
+    background: #000; /* Fallback warna hitam */
 }
 
-/* --- FIX BACKGROUND UTAMA --- */
+/* 2. FIX BACKGROUND UTAMA (WAJIB ADA) */
 body::before {
     content: ""; 
     position: fixed; 
@@ -22,14 +26,14 @@ body::before {
     left: 0; 
     width: 100%; 
     height: 100%;
-    /* Link gambar background Anda */
+    /* Mengambil gambar background Anda */
     background: url('https://i.imgur.com/zGbaikU.jpeg') no-repeat center center;
     background-size: cover;
     z-index: -2; 
-    filter: brightness(0.6); /* Mengatur kegelapan agar teks emas/putih menyala */
+    filter: brightness(0.5); /* Membuat gambar agak gelap agar teks emas terbaca jelas */
 }
 
-/* Overlay Hitam Halus agar background tidak terlalu ramai */
+/* Overlay transparan tambahan */
 .bg-overlay { 
     position: fixed; 
     inset: 0; 
@@ -37,13 +41,13 @@ body::before {
     z-index: -1; 
 }
 
-/* --- HEADER --- */
+/* 3. HEADER & MENU NAVIGATION */
 header { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 10px 20px; 
-    background: rgba(0, 0, 0, 0.85); /* Semi transparan */
+    background: rgba(0, 0, 0, 0.9); 
     border-bottom: 2px solid #ffd700; 
     position: sticky;
     top: 0;
@@ -51,27 +55,38 @@ header {
 }
 .logo img { height: 45px; width: auto; object-fit: contain; }
 
-/* --- BURGER & DROPDOWN --- */
+/* BURGER ICON */
 .menu-container { position: relative; }
 .burger { cursor: pointer; padding: 5px; }
 .burger span {
     display: block; width: 25px; height: 3px; margin: 5px 0;
     background: #ffd700; border-radius: 2px;
 }
+
+/* DROPDOWN MENU */
 .dropdown-card {
-    display: none; position: absolute; top: 50px; right: 0;
-    background: rgba(17, 17, 17, 0.95); border: 1px solid #ffd700;
-    border-radius: 8px; width: 160px; flex-direction: column; 
+    display: none; 
+    position: absolute; 
+    top: 50px; 
+    right: 0;
+    background: rgba(17, 17, 17, 0.95); 
+    border: 1px solid #ffd700;
+    border-radius: 8px; 
+    width: 160px; 
+    flex-direction: column; 
     backdrop-filter: blur(10px);
 }
 .dropdown-card.active { display: flex; }
 .dropdown-card a {
-    color: white; text-decoration: none; padding: 12px 15px;
-    font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: white; 
+    text-decoration: none; 
+    padding: 12px 15px;
+    font-size: 14px; 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .dropdown-card a:hover { background: #ffd700; color: #000; }
 
-/* --- RUNNING TEXT --- */
+/* 4. RUNNING TEXT (MARQUEE) */
 .marquee-container { 
     background: #b32e2e; 
     height: 35px; 
@@ -81,19 +96,19 @@ header {
 }
 .marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; width: 100%; }
 
-/* --- BANNER SLIDER (ANTI-GEPENG) --- */
+/* 5. BANNER SLIDER (TEKNIK ANTI-GEPENG) */
 .banner-slider { 
     width: 100%; 
     position: relative; 
     overflow: hidden; 
-    aspect-ratio: 21 / 9; /* Rasio terkunci */
+    aspect-ratio: 21 / 9; /* Mengunci bentuk banner */
     border-bottom: 2px solid #ffd700;
 }
 .slider-wrapper { display: flex; transition: transform 0.6s ease-in-out; height: 100%; }
-.slide { min-width: 100%; height: 100%; position: relative; }
+.slide { min-width: 100%; height: 100%; }
 .slide img { 
     width: 100%; height: 100%; 
-    object-fit: cover; /* Tidak akan penyok */
+    object-fit: cover; /* Gambar terpotong rapi, tidak ditarik/gepeng */
     object-position: center; 
 }
 
@@ -105,12 +120,41 @@ header {
 .next-btn { right: 0; }
 .prev-btn { left: 0; }
 
-/* --- TABEL JADWAL (TRANSPARAN) --- */
-.schedule-section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+/* 6. FITUR #1: TAB FILTER LIGA */
+.tab-filter { 
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 15px; 
+    overflow-x: auto; 
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+}
+.tab-filter::-webkit-scrollbar { display: none; } /* Hilangkan scrollbar di Chrome */
+
+.tab-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid #ffd700;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.tab-btn.active { 
+    background: #ffd700; 
+    color: #000; 
+}
+
+/* 7. TABEL JADWAL (GLASSMORPHISM) */
+.schedule-section { padding: 25px 20px; max-width: 1100px; margin: auto; }
 .section-title { font-weight: 800; color: #ffd700; margin-bottom: 15px; border-left: 4px solid #ffd700; padding-left: 15px; }
+
 .table-container { 
-    background: rgba(0, 0, 0, 0.7); /* Transparan agar BG terlihat */
-    backdrop-filter: blur(5px); 
+    background: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(8px); 
     border-radius: 12px; 
     overflow-x: auto; 
     border: 1px solid rgba(255, 215, 0, 0.3); 
@@ -119,7 +163,7 @@ table { width: 100%; border-collapse: collapse; min-width: 600px; }
 th { background: rgba(255, 215, 0, 0.2); color: #ffd700; padding: 15px; text-align: left; font-size: 13px; }
 td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; }
 
-/* --- KARTU SKOR (GLASS EFFECT) --- */
+/* 8. KARTU PREDIKSI (MATCH GRID) */
 .match-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -129,13 +173,16 @@ td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size
     margin: auto; 
 }
 .card { 
-    background: rgba(0, 0, 0, 0.65); /* Transparan */
-    backdrop-filter: blur(8px); /* Efek kaca */
+    background: rgba(0, 0, 0, 0.65); 
+    backdrop-filter: blur(8px); 
     padding: 25px; 
     border-radius: 15px; 
     text-align: center; 
     border: 1px solid rgba(255, 215, 0, 0.2); 
+    transition: 0.3s;
 }
+.card:hover { border-color: #ffd700; transform: translateY(-5px); }
+
 .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
 .team img { 
     width: 60px; height: 60px; 
@@ -146,20 +193,36 @@ td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size
     padding: 5px; 
 }
 .vs { font-size: 22px; font-weight: 800; color: #ffd700; }
-.score { font-size: 35px; font-weight: 700; margin: 10px 0; color: #ffd700; }
+.score { font-size: 35px; font-weight: 700; margin: 10px 0; color: #fff; }
+
+/* FITUR #3: TOMBOL SALIN */
+.copy-btn {
+    background: transparent;
+    color: #ffd700;
+    border: 1px dashed #ffd700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.copy-btn:hover { background: rgba(255, 215, 0, 0.1); }
 
 .card-btn { 
-    display: inline-block; 
-    margin-top: 15px; 
-    color: #000; 
+    display: block; 
     background: #ffd700; 
+    color: #000; 
     text-decoration: none; 
-    padding: 10px 25px; 
+    padding: 12px; 
     border-radius: 8px; 
-    font-weight: bold; 
+    font-weight: 800; 
+    transition: 0.3s;
 }
+.card-btn:hover { background: #fff; }
 
-/* --- FLOATING BUTTON --- */
+/* 9. FLOATING BUTTON & DOTS */
 .floating { 
     position: fixed; 
     bottom: 20px; 
@@ -174,7 +237,6 @@ td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); 
 }
 
-/* DOTS SLIDER */
 .dots-container { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
-.dot { width: 10px; height: 10px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; }
-.dot.active { background: #ffd700; width: 25px; border-radius: 10px; transition: 0.3s; }
+.dot { width: 10px; height: 10px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: 0.3s; }
+.dot.active { background: #ffd700; width: 25px; border-radius: 10px; }
