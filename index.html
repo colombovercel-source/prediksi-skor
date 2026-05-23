@@ -55,7 +55,21 @@
         <button class="tab-btn" onclick="filterLeague('UCL')">UCL</button>
         <button class="tab-btn" onclick="filterLeague('LIGA 1')">LIGA 1</button>
     </div>
-<!-- Fitur 3D Carousel Baru -->
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Liga</th>
+                    <th>Pertandingan</th>
+                    <th>Win Prob (%)</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleBody"></tbody>
+        </table>
+    </div>
+    <!-- Fitur 3D Carousel Baru -->
     
 <div class="page">
   <div class="scene">    
@@ -75,20 +89,6 @@
     </div>  
   </div>
 </div>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Waktu</th>
-                    <th>Liga</th>
-                    <th>Pertandingan</th>
-                    <th>Win Prob (%)</th>
-                </tr>
-            </thead>
-            <tbody id="scheduleBody"></tbody>
-        </table>
-    </div>
 </section>
 
 <main id="matches" class="match-grid"></main>
