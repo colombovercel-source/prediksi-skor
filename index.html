@@ -4,164 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RINJANI4D — Analisa & Prediksi Bola</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
 
 <div class="bg-overlay"></div>
 
-<!-- HEADER -->
 <header>
   <div class="logo">
     <img src="https://i.imgur.com/DuwlIfJ.png" alt="Logo RINJANI4D">
   </div>
-  <nav class="nav-desktop">
-    <a href="https://rinjaniman.com" class="nav-link">Login</a>
-    <a href="https://rinjaniman.com/register" class="nav-link nav-link--cta">Daftar Sekarang</a>
-  </nav>
   <div class="menu-container">
     <div class="burger" id="burger">
       <span></span><span></span><span></span>
     </div>
     <div class="dropdown-card" id="dropdownCard">
-      <a href="https://rinjaniman.com">🔐 Login</a>
-      <a href="https://rinjaniman.com/register">📝 Daftar</a>
-      <a href="https://rinjani-game-world--colombogelap.replit.app">👤 Profil</a>
+      <a href="https://rinjaniman.com">Login</a>
+      <a href="https://rinjaniman.com/register">Daftar</a>
+      <a href="https://rinjani-game-world--colombogelap.replit.app">Profil</a>
     </div>
   </div>
 </header>
 
-<!-- TICKER -->
-<div class="ticker-bar">
-  <div class="ticker-inner">
-    <span class="ticker-label">LIVE</span>
-    <div class="ticker-text">
-      📢 RINJANI4D: Prediksi Terakurat Hari Ini! &nbsp;&nbsp;&nbsp; ⚽ Update Jadwal Liga Inggris, UCL, dan Liga 1 Secara Real-Time &nbsp;&nbsp;&nbsp; 🏆 Win Rate 85% Minggu Ini &nbsp;&nbsp;&nbsp; 🔥 250+ Member Aktif Hari Ini &nbsp;&nbsp;&nbsp; 📢 RINJANI4D: Prediksi Terakurat Hari Ini! &nbsp;&nbsp;&nbsp; ⚽ Update Jadwal Liga Inggris, UCL, dan Liga 1 Secara Real-Time
+<div class="marquee-container">
+    <div class="marquee-content">
+        <marquee scrollamount="5">📢 RINJANI4D: Prediksi Terakurat Hari Ini! Update Jadwal Liga Inggris, UCL, dan Liga 1 Secara Real-Time.</marquee>
     </div>
-  </div>
 </div>
 
-<!-- BANNER SLIDER -->
 <section class="banner-slider">
-  <div class="slider-wrapper" id="slider">
-    <div class="slide"><img src="https://i.imgur.com/VDY1cAE.png" alt="Banner 1"></div>
-    <div class="slide"><img src="https://i.imgur.com/NiAhn45.png" alt="Banner 2"></div>
-    <div class="slide"><img src="https://i.imgur.com/HEy90o8.png" alt="Banner 3"></div>
-    <div class="slide"><img src="https://i.imgur.com/ebLmmYA.png" alt="Banner 4"></div>
-    <div class="slide"><img src="https://i.imgur.com/GZux8Ft.png" alt="Banner 5"></div>
-  </div>
-  <button class="slider-btn prev-btn" id="prevBtn">&#10094;</button>
-  <button class="slider-btn next-btn" id="nextBtn">&#10095;</button>
-  <div class="dots-container" id="dotsContainer"></div>
+    <div class="slider-wrapper" id="slider">
+        <div class="slide"><img src="https://i.imgur.com/VDY1cAE.png"></div>
+        <div class="slide"><img src="https://i.imgur.com/NiAhn45.png"></div>
+        <div class="slide"><img src="https://i.imgur.com/HEy90o8.png"></div>
+        <div class="slide"><img src="https://i.imgur.com/ebLmmYA.png"></div>
+        <div class="slide"><img src="https://i.imgur.com/GZux8Ft.png"></div>
+    </div>
+    <button class="prev-btn" id="prevBtn">&#10094;</button>
+    <button class="next-btn" id="nextBtn">&#10095;</button>
+    <div class="dots-container" id="dotsContainer"></div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stat-item">
-    <span class="stat-num">250+</span>
-    <span class="stat-lbl">Member Aktif</span>
-  </div>
-  <div class="stat-divider"></div>
-  <div class="stat-item">
-    <span class="stat-num">85%</span>
-    <span class="stat-lbl">Win Rate</span>
-  </div>
-  <div class="stat-divider"></div>
-  <div class="stat-item">
-    <span class="stat-num">3 Liga</span>
-    <span class="stat-lbl">Tersedia</span>
-  </div>
-  <div class="stat-divider"></div>
-  <div class="stat-item">
-    <span class="stat-num">Live</span>
-    <span class="stat-lbl">Update Real-Time</span>
-  </div>
-</div>
-
-<!-- MAIN CONTENT -->
-<main class="main-content">
-
-  <!-- ANALISA SECTION -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">📊 Analisa Peluang</h2>
-      <span class="section-badge">H | D | A</span>
-    </div>
-
+<section class="schedule-section">
+    <div class="section-title">📊 ANALISA PELUANG (H | D | A)</div>
+    
     <div class="tab-filter" id="tabFilter">
-      <button class="tab-btn active" onclick="filterLeague('ALL')">Semua</button>
-      <button class="tab-btn" onclick="filterLeague('EPL')">EPL</button>
-      <button class="tab-btn" onclick="filterLeague('UCL')">UCL</button>
-      <button class="tab-btn" onclick="filterLeague('LIGA 1')">Liga 1</button>
+        <button class="tab-btn active" onclick="filterLeague('ALL')">SEMUA</button>
+        <button class="tab-btn" onclick="filterLeague('EPL')">EPL</button>
+        <button class="tab-btn" onclick="filterLeague('UCL')">UCL</button>
+        <button class="tab-btn" onclick="filterLeague('LIGA 1')">LIGA 1</button>
     </div>
 
     <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Waktu</th>
-            <th>Liga</th>
-            <th>Pertandingan</th>
-            <th>Win Prob (%)</th>
-          </tr>
-        </thead>
-        <tbody id="scheduleBody"></tbody>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Liga</th>
+                    <th>Pertandingan</th>
+                    <th>Win Prob (%)</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleBody"></tbody>
+        </table>
     </div>
-  </section>
-
-  <!-- MATCH CARDS -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">🔥 Prediksi Terkini</h2>
-      <span class="section-badge">Update Harian</span>
-    </div>
-    <div class="match-grid" id="matches"></div>
-  </section>
-
-  <!-- 3D CAROUSEL -->
-  <section class="section carousel-section">
-    <div class="section-header">
-      <h2 class="section-title">⭐ Prediktor Terpercaya</h2>
-    </div>
-    <div class="carousel-scene">
-      <div class="a3d" style="--n: 12">
-        <img class="carousel-card" style="--i:0"  src="https://i.imgur.com/cBFVxdR.png" alt="Member 1">
-        <img class="carousel-card" style="--i:1"  src="https://i.imgur.com/6Q305xB.png" alt="Member 2">
-        <img class="carousel-card" style="--i:2"  src="https://i.imgur.com/AGDx072.png" alt="Member 3">
-        <img class="carousel-card" style="--i:3"  src="https://i.imgur.com/7cUoYM6.png" alt="Member 4">
-        <img class="carousel-card" style="--i:4"  src="https://i.imgur.com/XvqdJxb.png" alt="Member 5">
-        <img class="carousel-card" style="--i:5"  src="https://i.imgur.com/r53dzxC.png" alt="Member 6">
-        <img class="carousel-card" style="--i:6"  src="https://i.imgur.com/TZZIY4f.png" alt="Member 7">
-        <img class="carousel-card" style="--i:7"  src="https://i.imgur.com/fcNEXqP.png" alt="Member 8">
-        <img class="carousel-card" style="--i:8"  src="https://i.imgur.com/OA7m8pc.png" alt="Member 9">
-        <img class="carousel-card" style="--i:9"  src="https://i.imgur.com/bGy94d6.png" alt="Member 10">
-        <img class="carousel-card" style="--i:10" src="https://i.imgur.com/THQftbr.png" alt="Member 11">
-        <img class="carousel-card" style="--i:11" src="https://i.imgur.com/KxLtKEp.png" alt="Member 12">
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <img src="https://i.imgur.com/DuwlIfJ.png" alt="Logo" class="footer-logo">
-    <p class="footer-text">© 2025 RINJANI4D — Analisa & Prediksi Terbaik</p>
-    <div class="footer-links">
-      <a href="https://rinjaniman.com">Login</a>
-      <a href="https://rinjaniman.com/register">Daftar</a>
-    </div>
+</section>
+    <br>
+    <br>
+    
+    <!-- Fitur 3D Carousel Baru -->
+    
+<div class="page">
+  <div class="scene">    
+    <div class="a3d" style="--n: 12">      
+      <img class="card" style="--i: 0"  src="https://i.imgur.com/cBFVxdR.png" alt="Jellyfish 1">      
+      <img class="card" style="--i: 1"  src="https://i.imgur.com/6Q305xB.png" alt="Jellyfish 2">      
+      <img class="card" style="--i: 2"  src="https://i.imgur.com/AGDx072.png" alt="Jellyfish 3">      
+      <img class="card" style="--i: 3"  src="https://i.imgur.com/7cUoYM6.png" alt="Jellyfish 4">      
+      <img class="card" style="--i: 4"  src="https://i.imgur.com/XvqdJxb.png" alt="Jellyfish 5">      
+      <img class="card" style="--i: 5"  src="https://i.imgur.com/r53dzxC.png" alt="Jellyfish 6">      
+      <img class="card" style="--i: 6"  src="https://i.imgur.com/TZZIY4f.png" alt="Jellyfish 7">      
+      <img class="card" style="--i: 7"  src="https://i.imgur.com/fcNEXqP.png" alt="Jellyfish 8">      
+      <img class="card" style="--i: 8"  src="https://i.imgur.com/OA7m8pc.png" alt="Jellyfish 9">      
+      <img class="card" style="--i: 9"  src="https://i.imgur.com/bGy94d6.png" alt="Jellyfish 10">      
+      <img class="card" style="--i: 10" src="https://i.imgur.com/THQftbr.png" alt="Jellyfish 11">      
+      <img class="card" style="--i: 11" src="https://i.imgur.com/KxLtKEp.png" alt="Jellyfish 12">    
+    </div>  
   </div>
-</footer>
+</div>
 
-<!-- FLOATING CTA -->
-<a href="https://rinjaniman.com" target="_blank" class="floating-btn">
-  <span class="floating-pulse"></span>
-  MAIN SEKARANG
-</a>
+<main id="matches" class="match-grid"></main>
+
+<a href="https://rinjaniman.com" target="_blank" class="floating">MAIN SEKARANG</a>
 
 <script src="script.js"></script>
 </body>
