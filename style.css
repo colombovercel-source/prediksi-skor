@@ -1,5 +1,5 @@
 /* ========================================
-   CORE STYLE - RINJANI4D (FINAL VERSION)
+   CORE STYLE - RINJANI4D (PERBAIKAN FINAL)
    ========================================
 */
 
@@ -15,10 +15,10 @@ body {
     color: white; 
     overflow-x: hidden; 
     min-height: 100vh;
-    background: #000; /* Fallback warna hitam */
+    background: #000;
 }
 
-/* 2. FIX BACKGROUND UTAMA (WAJIB ADA) */
+/* 2. FIX BACKGROUND UTAMA */
 body::before {
     content: ""; 
     position: fixed; 
@@ -26,18 +26,16 @@ body::before {
     left: 0; 
     width: 100%; 
     height: 100%;
-    /* Mengambil gambar background Anda */
     background: url('https://i.imgur.com/zGbaikU.jpeg') no-repeat center center;
     background-size: cover;
     z-index: -2; 
-    filter: brightness(0.5); /* Membuat gambar agak gelap agar teks emas terbaca jelas */
+    filter: brightness(0.4);
 }
 
-/* Overlay transparan tambahan */
 .bg-overlay { 
     position: fixed; 
     inset: 0; 
-    background: rgba(0, 0, 0, 0.4); 
+    background: rgba(0, 0, 0, 0.5); 
     z-index: -1; 
 }
 
@@ -96,19 +94,22 @@ header {
 }
 .marquee-content marquee { font-weight: 600; font-size: 14px; color: #fff; width: 100%; }
 
-/* 5. BANNER SLIDER (TEKNIK ANTI-GEPENG) */
+/* 5. BANNER SLIDER */
 .banner-slider { 
     width: 100%; 
     position: relative; 
     overflow: hidden; 
-    aspect-ratio: 21 / 9; /* Mengunci bentuk banner */
+    aspect-ratio: 21 / 9; 
     border-bottom: 2px solid #ffd700;
+}
+@media (max-width: 768px) {
+    .banner-slider { aspect-ratio: 16 / 9; }
 }
 .slider-wrapper { display: flex; transition: transform 0.6s ease-in-out; height: 100%; }
 .slide { min-width: 100%; height: 100%; }
 .slide img { 
     width: 100%; height: 100%; 
-    object-fit: cover; /* Gambar terpotong rapi, tidak ditarik/gepeng */
+    object-fit: cover; 
     object-position: center; 
 }
 
@@ -120,16 +121,16 @@ header {
 .next-btn { right: 0; }
 .prev-btn { left: 0; }
 
-/* 6. FITUR #1: TAB FILTER LIGA */
+/* 6. TAB FILTER LIGA */
 .tab-filter { 
     display: flex; 
     gap: 10px; 
     margin-bottom: 15px; 
     overflow-x: auto; 
     padding-bottom: 10px;
-    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+    scrollbar-width: none; 
 }
-.tab-filter::-webkit-scrollbar { display: none; } /* Hilangkan scrollbar di Chrome */
+.tab-filter::-webkit-scrollbar { display: none; }
 
 .tab-btn {
     background: rgba(255, 255, 255, 0.1);
@@ -148,7 +149,7 @@ header {
     color: #000; 
 }
 
-/* 7. TABEL JADWAL (GLASSMORPHISM) */
+/* 7. TABEL JADWAL */
 .schedule-section { padding: 25px 20px; max-width: 1100px; margin: auto; }
 .section-title { font-weight: 800; color: #ffd700; margin-bottom: 15px; border-left: 4px solid #ffd700; padding-left: 15px; }
 
@@ -158,18 +159,19 @@ header {
     border-radius: 12px; 
     overflow-x: auto; 
     border: 1px solid rgba(255, 215, 0, 0.3); 
+    margin-bottom: 30px;
 }
 table { width: 100%; border-collapse: collapse; min-width: 600px; }
 th { background: rgba(255, 215, 0, 0.2); color: #ffd700; padding: 15px; text-align: left; font-size: 13px; }
 td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; }
 
-/* 8. KARTU PREDIKSI (MATCH GRID) */
+/* 8. KARTU PREDIKSI (FIXED TYPO MAX-WIDTH) */
 .match-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 20px; 
     padding: 20px; 
-    max-width: 100px; 
+    max-width: 1100px; /* Diperbaiki dari 100px */
     margin: auto; 
 }
 .card { 
@@ -184,6 +186,7 @@ td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size
 .card:hover { border-color: #ffd700; transform: translateY(-5px); }
 
 .teams { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.team { flex: 1; }
 .team img { 
     width: 60px; height: 60px; 
     object-fit: contain; 
@@ -191,11 +194,12 @@ td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size
     border-radius: 50%; 
     background: rgba(255, 255, 255, 0.1); 
     padding: 5px; 
+    margin-bottom: 5px;
 }
-.vs { font-size: 22px; font-weight: 800; color: #ffd700; }
+.vs { font-size: 22px; font-weight: 800; color: #ffd700; padding: 0 10px; }
 .score { font-size: 35px; font-weight: 700; margin: 10px 0; color: #fff; }
 
-/* FITUR #3: TOMBOL SALIN */
+/* TOMBOL SALIN */
 .copy-btn {
     background: transparent;
     color: #ffd700;
@@ -241,21 +245,39 @@ td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size
 .dot { width: 10px; height: 10px; background: rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; transition: 0.3s; }
 .dot.active { background: #ffd700; width: 25px; border-radius: 10px; }
 
-/* 3D CAROUSEL STYLE */
+/* ========================================
+   10. PERBAIKAN FITUR 3D CAROUSEL (ANTI-BENTROK)
+   ========================================
+*/
+.page {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
 .scene {
-    width: 280px; height: 180px; margin: 40px auto;
-    perspective: 800px;
+    width: 160px;  /* Disesuaikan ukurannya agar proporsional */
+    height: 230px; 
+    margin: 50px auto 70px auto;
+    perspective: 1000px;
 }
 .a3d {
     width: 100%; height: 100%; position: relative;
     transform-style: preserve-3d;
-    animation: rotate 20s linear infinite;
+    animation: rotate 25s linear infinite;
 }
-.card {
-    position: absolute; width: 100%; height: 100%;
-    transform: rotateY(calc(var(--i) * (360deg / var(--n)))) translateZ(300px);
-    border-radius: 10px; object-fit: cover;
+/* Mengubah target selector agar tidak merusak .card milik match-grid */
+.a3d img.card {
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+    padding: 0 !important; /* Paksa reset padding bawaan kartu prediksi */
+    background: none !important; /* Paksa reset background bawaan */
+    border-radius: 10px; 
+    object-fit: cover;
     border: 2px solid #ffd700;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    /* Atur radius putaran (translateZ) agar pas di layar PC & HP */
+    transform: rotateY(calc(var(--i) * (360deg / var(--n)))) translateZ(280px);
 }
 @keyframes rotate {
     from { transform: rotateY(0deg); }
