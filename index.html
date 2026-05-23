@@ -5,47 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RINJANI4D — Analisa & Prediksi Bola</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="bg-overlay"></div>
 
+<!-- HEADER NAVIGATION -->
 <header>
-  <div class="logo">
-    <img src="https://i.imgur.com/DuwlIfJ.png" alt="Logo RINJANI4D">
-  </div>
-  <div class="menu-container">
-    <div class="burger" id="burger">
-      <span></span><span></span><span></span>
+    <div class="logo">
+        <img src="https://i.imgur.com/DuwlIfJ.png" alt="Logo RINJANI4D">
     </div>
-    <div class="dropdown-card" id="dropdownCard">
-      <a href="https://rinjaniman.com">Login</a>
-      <a href="https://rinjaniman.com/register">Daftar</a>
-      <a href="https://rinjani-game-world--colombogelap.replit.app">Profil</a>
+    <div class="menu-container">
+        <div class="burger" id="burger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="dropdown-card" id="dropdownCard">
+            <a href="https://rinjaniman.com">Login</a>
+            <a href="https://rinjaniman.com/register">Daftar</a>
+            <a href="https://rinjani-game-world--colombogelap.replit.app">Profil</a>
+        </div>
     </div>
-  </div>
 </header>
 
+<!-- RUNNING TEXT -->
 <div class="marquee-container">
     <div class="marquee-content">
         <marquee scrollamount="5">📢 RINJANI4D: Prediksi Terakurat Hari Ini! Update Jadwal Liga Inggris, UCL, dan Liga 1 Secara Real-Time.</marquee>
     </div>
 </div>
 
+<!-- BANNER SLIDER -->
 <section class="banner-slider">
     <div class="slider-wrapper" id="slider">
-        <div class="slide"><img src="https://i.imgur.com/VDY1cAE.png"></div>
-        <div class="slide"><img src="https://i.imgur.com/NiAhn45.png"></div>
-        <div class="slide"><img src="https://i.imgur.com/HEy90o8.png"></div>
-        <div class="slide"><img src="https://i.imgur.com/ebLmmYA.png"></div>
-        <div class="slide"><img src="https://i.imgur.com/GZux8Ft.png"></div>
+        <div class="slide"><img src="https://i.imgur.com/VDY1cAE.png" alt="Banner 1"></div>
+        <div class="slide"><img src="https://i.imgur.com/NiAhn45.png" alt="Banner 2"></div>
+        <div class="slide"><img src="https://i.imgur.com/HEy90o8.png" alt="Banner 3"></div>
+        <div class="slide"><img src="https://i.imgur.com/ebLmmYA.png" alt="Banner 4"></div>
+        <div class="slide"><img src="https://i.imgur.com/GZux8Ft.png" alt="Banner 5"></div>
     </div>
     <button class="prev-btn" id="prevBtn">&#10094;</button>
     <button class="next-btn" id="nextBtn">&#10095;</button>
     <div class="dots-container" id="dotsContainer"></div>
 </section>
 
+<!-- SCHEDULE & ANALISA SECTION -->
 <section class="schedule-section">
     <div class="section-title">📊 ANALISA PELUANG (H | D | A)</div>
     
@@ -56,6 +60,7 @@
         <button class="tab-btn" onclick="filterLeague('LIGA 1')">LIGA 1</button>
     </div>
 
+    <!-- TABEL JADWAL PERTANDINGAN -->
     <div class="table-container">
         <table>
             <thead>
@@ -69,38 +74,35 @@
             <tbody id="scheduleBody"></tbody>
         </table>
     </div>
-</section>
-    <br>
-    <br>
-    
-    <!-- Fitur 3D Carousel Baru -->
-    
-<div class="page">
-  <div class="scene">    
-    <div class="a3d" style="--n: 12">      
-      <img class="card" style="--i: 0"  src="https://i.imgur.com/cBFVxdR.png" alt="Jellyfish 1">      
-      <img class="card" style="--i: 1"  src="https://i.imgur.com/6Q305xB.png" alt="Jellyfish 2">      
-      <img class="card" style="--i: 2"  src="https://i.imgur.com/AGDx072.png" alt="Jellyfish 3">      
-      <img class="card" style="--i: 3"  src="https://i.imgur.com/7cUoYM6.png" alt="Jellyfish 4">      
-      <img class="card" style="--i: 4"  src="https://i.imgur.com/XvqdJxb.png" alt="Jellyfish 5">      
-      <img class="card" style="--i: 5"  src="https://i.imgur.com/r53dzxC.png" alt="Jellyfish 6">      
-      <img class="card" style="--i: 6"  src="https://i.imgur.com/TZZIY4f.png" alt="Jellyfish 7">      
-      <img class="card" style="--i: 7"  src="https://i.imgur.com/fcNEXqP.png" alt="Jellyfish 8">      
-      <img class="card" style="--i: 8"  src="https://i.imgur.com/OA7m8pc.png" alt="Jellyfish 9">      
-      <img class="card" style="--i: 9"  src="https://i.imgur.com/bGy94d6.png" alt="Jellyfish 10">      
-      <img class="card" style="--i: 10" src="https://i.imgur.com/THQftbr.png" alt="Jellyfish 11">      
-      <img class="card" style="--i: 11" src="https://i.imgur.com/KxLtKEp.png" alt="Jellyfish 12">    
-    </div>  
-  </div>
-</div>
-    
-    <br>
-    <br>
 
+    <!-- FITUR 3D CAROUSEL (DI BAWAH ANALISA PELUANG) -->
+    <div class="page">
+        <div class="scene">    
+            <div class="a3d" style="--n: 12">      
+                <img class="card" style="--i: 0"  src="https://i.imgur.com/cBFVxdR.png" alt="Jellyfish 1">      
+                <img class="card" style="--i: 1"  src="https://i.imgur.com/6Q305xB.png" alt="Jellyfish 2">      
+                <img class="card" style="--i: 2"  src="https://i.imgur.com/AGDx072.png" alt="Jellyfish 3">      
+                <img class="card" style="--i: 3"  src="https://i.imgur.com/7cUoYM6.png" alt="Jellyfish 4">      
+                <img class="card" style="--i: 4"  src="https://i.imgur.com/XvqdJxb.png" alt="Jellyfish 5">      
+                <img class="card" style="--i: 5"  src="https://i.imgur.com/r53dzxC.png" alt="Jellyfish 6">      
+                <img class="card" style="--i: 6"  src="https://i.imgur.com/TZZIY4f.png" alt="Jellyfish 7">      
+                <img class="card" style="--i: 7"  src="https://i.imgur.com/fcNEXqP.png" alt="Jellyfish 8">      
+                <img class="card" style="--i: 8"  src="https://i.imgur.com/OA7m8pc.png" alt="Jellyfish 9">      
+                <img class="card" style="--i: 9"  src="https://i.imgur.com/bGy94d6.png" alt="Jellyfish 10">      
+                <img class="card" style="--i: 10" src="https://i.imgur.com/THQftbr.png" alt="Jellyfish 11">      
+                <img class="card" style="--i: 11" src="https://i.imgur.com/KxLtKEp.png" alt="Jellyfish 12">    
+            </div>  
+        </div>
+    </div>
+</section>
+
+<!-- MATCH GRID CARD PREDIKSI -->
 <main id="matches" class="match-grid"></main>
 
+<!-- FLOATING CONVERSION BUTTON -->
 <a href="https://rinjaniman.com" target="_blank" class="floating">MAIN SEKARANG</a>
 
+<!-- LOGIC JAVASCRIPT -->
 <script src="script.js"></script>
 </body>
 </html>
