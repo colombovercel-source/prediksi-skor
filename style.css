@@ -169,7 +169,7 @@ td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 20px; 
     padding: 20px; 
-    max-width: 500px; 
+    max-width: 100px; 
     margin: auto; 
 }
 .card { 
